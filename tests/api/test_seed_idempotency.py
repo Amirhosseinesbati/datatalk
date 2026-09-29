@@ -5,6 +5,7 @@ import json
 from datetime import datetime, timezone
 from types import SimpleNamespace
 
+from datatalk import cli
 from datatalk.database import Base, make_engine
 from datatalk.models import (
     Channel,
@@ -17,9 +18,6 @@ from datatalk.models import (
 )
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-
-from datatalk import cli
-
 
 def test_same_manifest_load_preserves_published_import_rows(tmp_path, monkeypatch):
     manifest = {"reference_date": "2026-09-28"}
