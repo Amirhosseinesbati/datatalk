@@ -19,6 +19,7 @@ from datatalk.models import (
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+
 def test_same_manifest_load_preserves_published_import_rows(tmp_path, monkeypatch):
     manifest = {"reference_date": "2026-09-28"}
     (tmp_path / "manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
