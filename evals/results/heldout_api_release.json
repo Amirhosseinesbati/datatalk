@@ -1,0 +1,3067 @@
+{
+  "run_type": "api",
+  "recovered_from_persisted_api_results": false,
+  "generated_at_utc": "2026-09-28T01:56:02+00:00",
+  "dataset_reference_date": "2026-09-28",
+  "dataset_manifest_sha256": "45baac2b00f4cecccc0cd4d7dd002e16d0b67f0a97ff84f08c6fc0cacef104a1",
+  "split": "heldout",
+  "summary": {
+    "mode": "api",
+    "fixture_only": false,
+    "selected_cases": 100,
+    "case_counts": {
+      "passed": 100,
+      "total": 100
+    },
+    "answerable_result_correctness": {
+      "correct": 63,
+      "total": 63
+    },
+    "clarification_or_abstention": {
+      "appropriate": 15,
+      "total": 15
+    },
+    "security_rejection": {
+      "denied": 22,
+      "total": 22
+    },
+    "categories": {
+      "access_sql_security": {
+        "passed": 22,
+        "total": 22
+      },
+      "ambiguous_or_unanswerable": {
+        "passed": 15,
+        "total": 15
+      },
+      "joins_cohort_refund_date": {
+        "passed": 21,
+        "total": 21
+      },
+      "standard_aggregation": {
+        "passed": 42,
+        "total": 42
+      }
+    },
+    "end_to_end_latency_ms": {
+      "p50": 1101.71,
+      "p95": 2173.73,
+      "n": 100
+    },
+    "query_latency_ms": {
+      "p50": 726.11,
+      "p95": 1416.85,
+      "n": 63
+    },
+    "transport_errors": []
+  },
+  "case_results": [
+    {
+      "case_id": "DT-006",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "47d19cf5-c637-48c7-aa17-aa1e0226430e",
+      "observed_plan": {
+        "metrics": [
+          "net_revenue"
+        ],
+        "dimensions": [],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "net_revenue_cents": 52965364
+        }
+      ],
+      "query_duration_ms": 785.65
+    },
+    {
+      "case_id": "DT-007",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "d71d2bb3-b373-4959-9a57-f6f84831576f",
+      "observed_plan": {
+        "metrics": [
+          "gross_sales"
+        ],
+        "dimensions": [],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "gross_sales_cents": 57628892
+        }
+      ],
+      "query_duration_ms": 744.44
+    },
+    {
+      "case_id": "DT-008",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "7fd67cfa-413f-4759-85f6-9be41b9e9221",
+      "observed_plan": {
+        "metrics": [
+          "discounts"
+        ],
+        "dimensions": [],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "discounts_cents": 3185153
+        }
+      ],
+      "query_duration_ms": 726.11
+    },
+    {
+      "case_id": "DT-009",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "36f96c4e-9f13-400b-b42c-e67b8b6a2b84",
+      "observed_plan": {
+        "metrics": [
+          "completed_orders"
+        ],
+        "dimensions": [],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "completed_orders": 2455
+        }
+      ],
+      "query_duration_ms": 849.1
+    },
+    {
+      "case_id": "DT-010",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "f6c7c410-c639-4ab7-952c-f323cf973db9",
+      "observed_plan": {
+        "metrics": [
+          "average_order_value"
+        ],
+        "dimensions": [],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "average_order_value_cents": 22176.68
+        }
+      ],
+      "query_duration_ms": 672.66
+    },
+    {
+      "case_id": "DT-011",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "811e9994-5afd-41be-9287-6347da1f05b0",
+      "observed_plan": {
+        "metrics": [
+          "net_revenue"
+        ],
+        "dimensions": [],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "net_revenue_cents": 57786842
+        }
+      ],
+      "query_duration_ms": 637.2
+    },
+    {
+      "case_id": "DT-012",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "0e9d31e1-fc49-4908-9763-5889078c81a8",
+      "observed_plan": {
+        "metrics": [
+          "gross_sales"
+        ],
+        "dimensions": [],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "gross_sales_cents": 61738430
+        }
+      ],
+      "query_duration_ms": 826.65
+    },
+    {
+      "case_id": "DT-013",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "b10c239b-7071-463e-8097-fee61296dc53",
+      "observed_plan": {
+        "metrics": [
+          "discounts"
+        ],
+        "dimensions": [],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "discounts_cents": 2529329
+        }
+      ],
+      "query_duration_ms": 559.07
+    },
+    {
+      "case_id": "DT-014",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "95b191be-c820-4e89-8ac2-36b3ab215581",
+      "observed_plan": {
+        "metrics": [
+          "completed_orders"
+        ],
+        "dimensions": [],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "completed_orders": 2595
+        }
+      ],
+      "query_duration_ms": 653.16
+    },
+    {
+      "case_id": "DT-015",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "55843119-9596-42a7-9913-cea41d8f9de9",
+      "observed_plan": {
+        "metrics": [
+          "average_order_value"
+        ],
+        "dimensions": [],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "average_order_value_cents": 22816.61
+        }
+      ],
+      "query_duration_ms": 633.52
+    },
+    {
+      "case_id": "DT-021",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "ee29f69a-cabc-4608-8942-18777e2ce008",
+      "observed_plan": {
+        "metrics": [
+          "net_revenue"
+        ],
+        "dimensions": [
+          "channel"
+        ],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 6,
+      "observed_row_sample": [
+        {
+          "channel": "Direct Web",
+          "net_revenue_cents": 16742275
+        },
+        {
+          "channel": "Marketplace",
+          "net_revenue_cents": 11068687
+        }
+      ],
+      "query_duration_ms": 615.79
+    },
+    {
+      "case_id": "DT-022",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "9671417a-2803-4058-be86-91cba7dd436b",
+      "observed_plan": {
+        "metrics": [
+          "gross_sales"
+        ],
+        "dimensions": [
+          "channel"
+        ],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 6,
+      "observed_row_sample": [
+        {
+          "channel": "Direct Web",
+          "gross_sales_cents": 18187100
+        },
+        {
+          "channel": "Marketplace",
+          "gross_sales_cents": 12102335
+        }
+      ],
+      "query_duration_ms": 416.85
+    },
+    {
+      "case_id": "DT-023",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "09669df4-b1c6-4bda-b9a9-c4621a5a43c9",
+      "observed_plan": {
+        "metrics": [
+          "discounts"
+        ],
+        "dimensions": [
+          "channel"
+        ],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 6,
+      "observed_row_sample": [
+        {
+          "channel": "Direct Web",
+          "discounts_cents": 1048660
+        },
+        {
+          "channel": "Marketplace",
+          "discounts_cents": 618913
+        }
+      ],
+      "query_duration_ms": 601.67
+    },
+    {
+      "case_id": "DT-024",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "9e84ad9c-faf4-46e9-a608-f193b43c1fdd",
+      "observed_plan": {
+        "metrics": [
+          "completed_orders"
+        ],
+        "dimensions": [
+          "channel"
+        ],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 6,
+      "observed_row_sample": [
+        {
+          "channel": "Direct Web",
+          "completed_orders": 758
+        },
+        {
+          "channel": "Marketplace",
+          "completed_orders": 528
+        }
+      ],
+      "query_duration_ms": 523.88
+    },
+    {
+      "case_id": "DT-025",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "fb31c48d-92c3-4b18-8cde-de7c1e8f0b4c",
+      "observed_plan": {
+        "metrics": [
+          "average_order_value"
+        ],
+        "dimensions": [
+          "channel"
+        ],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 6,
+      "observed_row_sample": [
+        {
+          "channel": "Partner Portal",
+          "average_order_value_cents": 24685.04
+        },
+        {
+          "channel": "Field Sales",
+          "average_order_value_cents": 24337.49
+        }
+      ],
+      "query_duration_ms": 685.0
+    },
+    {
+      "case_id": "DT-026",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "8731135b-2547-4616-8b41-edaba42a745a",
+      "observed_plan": {
+        "metrics": [
+          "net_revenue"
+        ],
+        "dimensions": [
+          "channel"
+        ],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 6,
+      "observed_row_sample": [
+        {
+          "channel": "Direct Web",
+          "net_revenue_cents": 18965418
+        },
+        {
+          "channel": "Marketplace",
+          "net_revenue_cents": 12108576
+        }
+      ],
+      "query_duration_ms": 733.25
+    },
+    {
+      "case_id": "DT-027",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "77c9af37-280b-4e54-a9cf-a9c6ad3748aa",
+      "observed_plan": {
+        "metrics": [
+          "gross_sales"
+        ],
+        "dimensions": [
+          "channel"
+        ],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 6,
+      "observed_row_sample": [
+        {
+          "channel": "Direct Web",
+          "gross_sales_cents": 20172981
+        },
+        {
+          "channel": "Marketplace",
+          "gross_sales_cents": 12872460
+        }
+      ],
+      "query_duration_ms": 1119.89
+    },
+    {
+      "case_id": "DT-028",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "a891f000-fe72-408f-adf8-0865e1ff8101",
+      "observed_plan": {
+        "metrics": [
+          "discounts"
+        ],
+        "dimensions": [
+          "channel"
+        ],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 6,
+      "observed_row_sample": [
+        {
+          "channel": "Direct Web",
+          "discounts_cents": 834946
+        },
+        {
+          "channel": "Wholesale",
+          "discounts_cents": 529713
+        }
+      ],
+      "query_duration_ms": 596.7
+    },
+    {
+      "case_id": "DT-029",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "7d150c66-6969-4df2-ba73-e36c5d07ba4c",
+      "observed_plan": {
+        "metrics": [
+          "completed_orders"
+        ],
+        "dimensions": [
+          "channel"
+        ],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 6,
+      "observed_row_sample": [
+        {
+          "channel": "Direct Web",
+          "completed_orders": 818
+        },
+        {
+          "channel": "Marketplace",
+          "completed_orders": 554
+        }
+      ],
+      "query_duration_ms": 677.43
+    },
+    {
+      "case_id": "DT-030",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "2e1a8eae-4031-42a5-9e20-22b97d91e454",
+      "observed_plan": {
+        "metrics": [
+          "average_order_value"
+        ],
+        "dimensions": [
+          "channel"
+        ],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 6,
+      "observed_row_sample": [
+        {
+          "channel": "Direct Web",
+          "average_order_value_cents": 23640.63
+        },
+        {
+          "channel": "Field Sales",
+          "average_order_value_cents": 23442.78
+        }
+      ],
+      "query_duration_ms": 624.73
+    },
+    {
+      "case_id": "DT-035",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "f159290a-42ad-45e5-800e-2818bd5b9b60",
+      "observed_plan": {
+        "metrics": [
+          "average_order_value"
+        ],
+        "dimensions": [
+          "category"
+        ],
+        "start_date": "2026-01-01",
+        "end_date": "2026-02-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 10,
+      "observed_row_sample": [
+        {
+          "category": "Facility",
+          "average_order_value_cents": 40421.46
+        },
+        {
+          "category": "Tools",
+          "average_order_value_cents": 39621.75
+        }
+      ],
+      "query_duration_ms": 740.52
+    },
+    {
+      "case_id": "DT-036",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "1129665f-4dbf-4188-99d8-b161366399cf",
+      "observed_plan": {
+        "metrics": [
+          "net_revenue"
+        ],
+        "dimensions": [
+          "category"
+        ],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 10,
+      "observed_row_sample": [
+        {
+          "category": "Office Supplies",
+          "net_revenue_cents": 10904093
+        },
+        {
+          "category": "Furniture",
+          "net_revenue_cents": 10662216
+        }
+      ],
+      "query_duration_ms": 759.04
+    },
+    {
+      "case_id": "DT-037",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "5af3d16d-9a76-4274-9b91-79638467b248",
+      "observed_plan": {
+        "metrics": [
+          "gross_sales"
+        ],
+        "dimensions": [
+          "category"
+        ],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 10,
+      "observed_row_sample": [
+        {
+          "category": "Office Supplies",
+          "gross_sales_cents": 11802211
+        },
+        {
+          "category": "Furniture",
+          "gross_sales_cents": 11461190
+        }
+      ],
+      "query_duration_ms": 844.42
+    },
+    {
+      "case_id": "DT-038",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "90785599-94fa-4de6-8a34-45bd6e0721f9",
+      "observed_plan": {
+        "metrics": [
+          "discounts"
+        ],
+        "dimensions": [
+          "category"
+        ],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 10,
+      "observed_row_sample": [
+        {
+          "category": "Office Supplies",
+          "discounts_cents": 640157
+        },
+        {
+          "category": "Furniture",
+          "discounts_cents": 582872
+        }
+      ],
+      "query_duration_ms": 713.64
+    },
+    {
+      "case_id": "DT-039",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "c6c01790-62b4-4c70-ba5e-3c3b479a5218",
+      "observed_plan": {
+        "metrics": [
+          "completed_orders"
+        ],
+        "dimensions": [
+          "category"
+        ],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 10,
+      "observed_row_sample": [
+        {
+          "category": "Office Supplies",
+          "completed_orders": 1642
+        },
+        {
+          "category": "Cleaning",
+          "completed_orders": 734
+        }
+      ],
+      "query_duration_ms": 753.6
+    },
+    {
+      "case_id": "DT-040",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "e537ee05-c571-4c2d-aba5-148d30efc084",
+      "observed_plan": {
+        "metrics": [
+          "average_order_value"
+        ],
+        "dimensions": [
+          "category"
+        ],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 10,
+      "observed_row_sample": [
+        {
+          "category": "Tools",
+          "average_order_value_cents": 37291.06
+        },
+        {
+          "category": "Furniture",
+          "average_order_value_cents": 36504.42
+        }
+      ],
+      "query_duration_ms": 575.52
+    },
+    {
+      "case_id": "DT-041",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "0575e013-7482-4e6d-9125-61a15fcb1058",
+      "observed_plan": {
+        "metrics": [
+          "net_revenue"
+        ],
+        "dimensions": [
+          "category"
+        ],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 10,
+      "observed_row_sample": [
+        {
+          "category": "Office Supplies",
+          "net_revenue_cents": 11464104
+        },
+        {
+          "category": "Furniture",
+          "net_revenue_cents": 10512424
+        }
+      ],
+      "query_duration_ms": 1002.99
+    },
+    {
+      "case_id": "DT-042",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "2afb5711-a722-4f3c-b76b-9b202a9a7da0",
+      "observed_plan": {
+        "metrics": [
+          "gross_sales"
+        ],
+        "dimensions": [
+          "category"
+        ],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 10,
+      "observed_row_sample": [
+        {
+          "category": "Office Supplies",
+          "gross_sales_cents": 12217627
+        },
+        {
+          "category": "Furniture",
+          "gross_sales_cents": 11126087
+        }
+      ],
+      "query_duration_ms": 936.1
+    },
+    {
+      "case_id": "DT-043",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "8543511c-c9ae-47aa-84e2-5b34e756ec7f",
+      "observed_plan": {
+        "metrics": [
+          "discounts"
+        ],
+        "dimensions": [
+          "category"
+        ],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 10,
+      "observed_row_sample": [
+        {
+          "category": "Office Supplies",
+          "discounts_cents": 483275
+        },
+        {
+          "category": "Furniture",
+          "discounts_cents": 437436
+        }
+      ],
+      "query_duration_ms": 894.84
+    },
+    {
+      "case_id": "DT-044",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "6f744fd1-d310-4c53-a146-e6cdcbcb64b1",
+      "observed_plan": {
+        "metrics": [
+          "completed_orders"
+        ],
+        "dimensions": [
+          "category"
+        ],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 10,
+      "observed_row_sample": [
+        {
+          "category": "Office Supplies",
+          "completed_orders": 1749
+        },
+        {
+          "category": "Cleaning",
+          "completed_orders": 794
+        }
+      ],
+      "query_duration_ms": 1028.46
+    },
+    {
+      "case_id": "DT-045",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "be71e73c-a6c1-4380-9553-aa75ef8c1fd8",
+      "observed_plan": {
+        "metrics": [
+          "average_order_value"
+        ],
+        "dimensions": [
+          "category"
+        ],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 10,
+      "observed_row_sample": [
+        {
+          "category": "Packaging",
+          "average_order_value_cents": 38441.57
+        },
+        {
+          "category": "Tools",
+          "average_order_value_cents": 37626.09
+        }
+      ],
+      "query_duration_ms": 1046.69
+    },
+    {
+      "case_id": "DT-050",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "98e8ccc8-f66e-4b8d-86c2-0ea99c800400",
+      "observed_plan": {
+        "metrics": [
+          "average_order_value"
+        ],
+        "dimensions": [
+          "month"
+        ],
+        "start_date": "2026-02-01",
+        "end_date": "2026-05-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 3,
+      "observed_row_sample": [
+        {
+          "month": "2026-04-01T00:00:00+00:00",
+          "average_order_value_cents": 23524.42
+        },
+        {
+          "month": "2026-03-01T00:00:00+00:00",
+          "average_order_value_cents": 22816.61
+        }
+      ],
+      "query_duration_ms": 1377.97
+    },
+    {
+      "case_id": "DT-051",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "d9bed457-62ba-4ffd-85c1-71ed0e243091",
+      "observed_plan": {
+        "metrics": [
+          "net_revenue"
+        ],
+        "dimensions": [
+          "month"
+        ],
+        "start_date": "2026-02-01",
+        "end_date": "2026-05-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 3,
+      "observed_row_sample": [
+        {
+          "month": "2026-03-01T00:00:00+00:00",
+          "net_revenue_cents": 57786842
+        },
+        {
+          "month": "2026-04-01T00:00:00+00:00",
+          "net_revenue_cents": 57100544
+        }
+      ],
+      "query_duration_ms": 1593.92
+    },
+    {
+      "case_id": "DT-052",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "c3976f5b-d2ac-4ce2-aecc-c67b5805a243",
+      "observed_plan": {
+        "metrics": [
+          "gross_sales"
+        ],
+        "dimensions": [
+          "month"
+        ],
+        "start_date": "2026-03-01",
+        "end_date": "2026-06-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 3,
+      "observed_row_sample": [
+        {
+          "month": "2026-03-01T00:00:00+00:00",
+          "gross_sales_cents": 61738430
+        },
+        {
+          "month": "2026-04-01T00:00:00+00:00",
+          "gross_sales_cents": 59765994
+        }
+      ],
+      "query_duration_ms": 1200.59
+    },
+    {
+      "case_id": "DT-053",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "3a45a75f-7c47-495d-a8ff-a1df80832022",
+      "observed_plan": {
+        "metrics": [
+          "discounts"
+        ],
+        "dimensions": [
+          "month"
+        ],
+        "start_date": "2026-03-01",
+        "end_date": "2026-06-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 3,
+      "observed_row_sample": [
+        {
+          "month": "2026-03-01T00:00:00+00:00",
+          "discounts_cents": 2529329
+        },
+        {
+          "month": "2026-04-01T00:00:00+00:00",
+          "discounts_cents": 1354855
+        }
+      ],
+      "query_duration_ms": 2195.05
+    },
+    {
+      "case_id": "DT-054",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "f3ae7a98-74c6-4b99-bcef-b7b64adc8570",
+      "observed_plan": {
+        "metrics": [
+          "completed_orders"
+        ],
+        "dimensions": [
+          "month"
+        ],
+        "start_date": "2026-03-01",
+        "end_date": "2026-06-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 3,
+      "observed_row_sample": [
+        {
+          "month": "2026-03-01T00:00:00+00:00",
+          "completed_orders": 2595
+        },
+        {
+          "month": "2026-04-01T00:00:00+00:00",
+          "completed_orders": 2483
+        }
+      ],
+      "query_duration_ms": 1416.85
+    },
+    {
+      "case_id": "DT-055",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "b39d788a-ebeb-42de-8e19-74356794a217",
+      "observed_plan": {
+        "metrics": [
+          "average_order_value"
+        ],
+        "dimensions": [
+          "month"
+        ],
+        "start_date": "2026-04-01",
+        "end_date": "2026-07-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 3,
+      "observed_row_sample": [
+        {
+          "month": "2026-04-01T00:00:00+00:00",
+          "average_order_value_cents": 23524.42
+        },
+        {
+          "month": "2026-06-01T00:00:00+00:00",
+          "average_order_value_cents": 23239.74
+        }
+      ],
+      "query_duration_ms": 1550.54
+    },
+    {
+      "case_id": "DT-056",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "8fafe7ec-d334-48e1-9a75-b99fa5244cd8",
+      "observed_plan": {
+        "metrics": [
+          "net_revenue"
+        ],
+        "dimensions": [
+          "month"
+        ],
+        "start_date": "2026-04-01",
+        "end_date": "2026-07-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 3,
+      "observed_row_sample": [
+        {
+          "month": "2026-04-01T00:00:00+00:00",
+          "net_revenue_cents": 57100544
+        },
+        {
+          "month": "2026-06-01T00:00:00+00:00",
+          "net_revenue_cents": 52689623
+        }
+      ],
+      "query_duration_ms": 1148.6
+    },
+    {
+      "case_id": "DT-057",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "9e937d04-992f-40fd-a1f1-1aa255f9a604",
+      "observed_plan": {
+        "metrics": [
+          "gross_sales"
+        ],
+        "dimensions": [
+          "month"
+        ],
+        "start_date": "2026-04-01",
+        "end_date": "2026-07-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 3,
+      "observed_row_sample": [
+        {
+          "month": "2026-04-01T00:00:00+00:00",
+          "gross_sales_cents": 59765994
+        },
+        {
+          "month": "2026-06-01T00:00:00+00:00",
+          "gross_sales_cents": 54981593
+        }
+      ],
+      "query_duration_ms": 1171.91
+    },
+    {
+      "case_id": "DT-058",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "0bcad400-f76b-4bad-80c7-063c585837aa",
+      "observed_plan": {
+        "metrics": [
+          "discounts"
+        ],
+        "dimensions": [
+          "month"
+        ],
+        "start_date": "2026-05-01",
+        "end_date": "2026-08-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 3,
+      "observed_row_sample": [
+        {
+          "month": "2026-07-01T00:00:00+00:00",
+          "discounts_cents": 3680259
+        },
+        {
+          "month": "2026-06-01T00:00:00+00:00",
+          "discounts_cents": 1297790
+        }
+      ],
+      "query_duration_ms": 1278.59
+    },
+    {
+      "case_id": "DT-059",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "35546667-95ca-4a3d-8e58-fe0320dc5910",
+      "observed_plan": {
+        "metrics": [
+          "completed_orders"
+        ],
+        "dimensions": [
+          "month"
+        ],
+        "start_date": "2026-05-01",
+        "end_date": "2026-08-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 3,
+      "observed_row_sample": [
+        {
+          "month": "2026-07-01T00:00:00+00:00",
+          "completed_orders": 3070
+        },
+        {
+          "month": "2026-05-01T00:00:00+00:00",
+          "completed_orders": 2313
+        }
+      ],
+      "query_duration_ms": 1111.8
+    },
+    {
+      "case_id": "DT-060",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "4b76a699-add3-410c-ae79-0587b23f8a20",
+      "observed_plan": {
+        "metrics": [
+          "average_order_value"
+        ],
+        "dimensions": [
+          "month"
+        ],
+        "start_date": "2026-05-01",
+        "end_date": "2026-08-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 3,
+      "observed_row_sample": [
+        {
+          "month": "2026-06-01T00:00:00+00:00",
+          "average_order_value_cents": 23239.74
+        },
+        {
+          "month": "2026-05-01T00:00:00+00:00",
+          "average_order_value_cents": 22785.01
+        }
+      ],
+      "query_duration_ms": 1237.22
+    },
+    {
+      "case_id": "DT-063",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "refund_event_month",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "e7796532-6ce4-4a59-959e-8e8a7923a434",
+      "observed_plan": {
+        "metrics": [
+          "refunds"
+        ],
+        "dimensions": [],
+        "start_date": "2026-05-01",
+        "end_date": "2026-06-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "refunds_cents": 1926306
+        }
+      ],
+      "query_duration_ms": 599.69
+    },
+    {
+      "case_id": "DT-064",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "refund_event_month",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "ca62bd3e-19f5-4a0d-8912-e6d0b8ebdca0",
+      "observed_plan": {
+        "metrics": [
+          "refunds"
+        ],
+        "dimensions": [],
+        "start_date": "2026-07-01",
+        "end_date": "2026-08-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "refunds_cents": 1197841
+        }
+      ],
+      "query_duration_ms": 914.89
+    },
+    {
+      "case_id": "DT-065",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "refund_event_month",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "570a90fa-b6d4-44df-8ec6-c139a4247522",
+      "observed_plan": {
+        "metrics": [
+          "refunds"
+        ],
+        "dimensions": [],
+        "start_date": "2026-01-01",
+        "end_date": "2026-02-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "refunds_cents": 1508734
+        }
+      ],
+      "query_duration_ms": 978.77
+    },
+    {
+      "case_id": "DT-068",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "returning_customer",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "46f3b6e9-bb99-47af-9b08-9465b55f73f3",
+      "observed_plan": {
+        "metrics": [
+          "returning_customers"
+        ],
+        "dimensions": [],
+        "start_date": "2026-06-01",
+        "end_date": "2026-07-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "returning_customers": 1142
+        }
+      ],
+      "query_duration_ms": 885.01
+    },
+    {
+      "case_id": "DT-069",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "returning_customer",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "0afed7dd-281a-4312-bb71-439b04e4a491",
+      "observed_plan": {
+        "metrics": [
+          "returning_customers"
+        ],
+        "dimensions": [],
+        "start_date": "2026-08-01",
+        "end_date": "2026-09-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "returning_customers": 1279
+        }
+      ],
+      "query_duration_ms": 648.61
+    },
+    {
+      "case_id": "DT-070",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "returning_customer",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "3d9b8246-9a69-4b87-b922-623918d41fae",
+      "observed_plan": {
+        "metrics": [
+          "returning_customers"
+        ],
+        "dimensions": [],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "returning_customers": 1162
+        }
+      ],
+      "query_duration_ms": 522.0
+    },
+    {
+      "case_id": "DT-072",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "top_products",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "6b0dee2b-4c08-4e56-8864-01ad9fa4425c",
+      "observed_plan": {
+        "metrics": [
+          "net_revenue"
+        ],
+        "dimensions": [
+          "product"
+        ],
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": "Cleaning",
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 5,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 5,
+      "observed_row_sample": [
+        {
+          "product": "Northstar Mop Head Plus",
+          "net_revenue_cents": 512267
+        },
+        {
+          "product": "Northstar Brush Set Core",
+          "net_revenue_cents": 319881
+        }
+      ],
+      "query_duration_ms": 479.53
+    },
+    {
+      "case_id": "DT-073",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "top_products",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "0e0084c5-b0a8-4c72-8fc3-637cc4618b81",
+      "observed_plan": {
+        "metrics": [
+          "net_revenue"
+        ],
+        "dimensions": [
+          "product"
+        ],
+        "start_date": "2026-05-01",
+        "end_date": "2026-06-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": "Breakroom",
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 5,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 5,
+      "observed_row_sample": [
+        {
+          "product": "Northstar Tea Assortment Plus",
+          "net_revenue_cents": 239904
+        },
+        {
+          "product": "Northstar Cup Sleeve Pro",
+          "net_revenue_cents": 226870
+        }
+      ],
+      "query_duration_ms": 459.85
+    },
+    {
+      "case_id": "DT-074",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "top_products",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "bde6653d-c0d8-45d8-93cd-6a746b0fc461",
+      "observed_plan": {
+        "metrics": [
+          "net_revenue"
+        ],
+        "dimensions": [
+          "product"
+        ],
+        "start_date": "2026-06-01",
+        "end_date": "2026-07-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": "Shipping",
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 5,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 5,
+      "observed_row_sample": [
+        {
+          "product": "Northstar Postal Scale Pro",
+          "net_revenue_cents": 191692
+        },
+        {
+          "product": "Northstar Parcel Box Core",
+          "net_revenue_cents": 168008
+        }
+      ],
+      "query_duration_ms": 486.84
+    },
+    {
+      "case_id": "DT-075",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "top_products",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "1812ff62-9c30-4eb9-81d4-a63cf953efc5",
+      "observed_plan": {
+        "metrics": [
+          "net_revenue"
+        ],
+        "dimensions": [
+          "product"
+        ],
+        "start_date": "2026-07-01",
+        "end_date": "2026-08-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": "Safety",
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 5,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 5,
+      "observed_row_sample": [
+        {
+          "product": "Northstar Eye Wash Plus",
+          "net_revenue_cents": 130766
+        },
+        {
+          "product": "Northstar Dust Mask Core",
+          "net_revenue_cents": 122596
+        }
+      ],
+      "query_duration_ms": 425.79
+    },
+    {
+      "case_id": "DT-078",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "campaign_window_comparison",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "3daa0b0a-cefe-4e73-875a-551d843379b1",
+      "observed_plan": {
+        "metrics": [
+          "net_revenue"
+        ],
+        "dimensions": [],
+        "start_date": "2026-02-04",
+        "end_date": "2026-03-14",
+        "date_basis": "order_date",
+        "comparison": "previous_period",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": [
+          "Date range follows the Winter Operations Drive campaign window; the comparison includes all completed sales and refunds in that window."
+        ]
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "current_value": 77728319,
+          "previous_value": 60978322,
+          "change": 16749997,
+          "growth_percent": 27.47
+        }
+      ],
+      "query_duration_ms": 1007.99
+    },
+    {
+      "case_id": "DT-079",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "campaign_window_comparison",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "115dcd11-5e04-456e-aa15-aa32fe0d88df",
+      "observed_plan": {
+        "metrics": [
+          "net_revenue"
+        ],
+        "dimensions": [],
+        "start_date": "2026-07-08",
+        "end_date": "2026-08-10",
+        "date_basis": "order_date",
+        "comparison": "previous_period",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": [
+          "Date range follows the Summer Relay campaign window; the comparison includes all completed sales and refunds in that window."
+        ]
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "current_value": 73214324,
+          "previous_value": 57674429,
+          "change": 15539895,
+          "growth_percent": 26.94
+        }
+      ],
+      "query_duration_ms": 749.52
+    },
+    {
+      "case_id": "DT-080",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "campaign_window_comparison",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "9bb5118f-4009-4288-94f4-9ae8e167df19",
+      "observed_plan": {
+        "metrics": [
+          "net_revenue"
+        ],
+        "dimensions": [],
+        "start_date": "2026-07-08",
+        "end_date": "2026-08-10",
+        "date_basis": "order_date",
+        "comparison": "previous_period",
+        "channel": "Direct Web",
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": [
+          "Date range follows the Summer Relay campaign window; the comparison includes all completed sales and refunds in that window."
+        ]
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "current_value": 21210375,
+          "previous_value": 16576168,
+          "change": 4634207,
+          "growth_percent": 27.96
+        }
+      ],
+      "query_duration_ms": 630.74
+    },
+    {
+      "case_id": "DT-082",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cancelled_orders",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "26880570-0c30-4f29-8b24-2aa9c5299a05",
+      "observed_plan": {
+        "metrics": [
+          "cancelled_orders"
+        ],
+        "dimensions": [
+          "channel"
+        ],
+        "start_date": "2026-06-01",
+        "end_date": "2026-07-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 6,
+      "observed_row_sample": [
+        {
+          "channel": "Direct Web",
+          "cancelled_orders": 31
+        },
+        {
+          "channel": "Marketplace",
+          "cancelled_orders": 28
+        }
+      ],
+      "query_duration_ms": 140.42
+    },
+    {
+      "case_id": "DT-083",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cancelled_orders",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "3b95ce9a-2e23-471e-89bb-9eb4abbc2cbf",
+      "observed_plan": {
+        "metrics": [
+          "cancelled_orders"
+        ],
+        "dimensions": [
+          "channel"
+        ],
+        "start_date": "2026-08-01",
+        "end_date": "2026-09-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 6,
+      "observed_row_sample": [
+        {
+          "channel": "Direct Web",
+          "cancelled_orders": 45
+        },
+        {
+          "channel": "Marketplace",
+          "cancelled_orders": 28
+        }
+      ],
+      "query_duration_ms": 128.23
+    },
+    {
+      "case_id": "DT-084",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cancelled_orders",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "f3d40b3b-ff68-49e2-90d7-a885a4ec9ddd",
+      "observed_plan": {
+        "metrics": [
+          "cancelled_orders"
+        ],
+        "dimensions": [
+          "channel"
+        ],
+        "start_date": "2026-02-01",
+        "end_date": "2026-03-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 6,
+      "observed_row_sample": [
+        {
+          "channel": "Direct Web",
+          "cancelled_orders": 39
+        },
+        {
+          "channel": "Wholesale",
+          "cancelled_orders": 30
+        }
+      ],
+      "query_duration_ms": 150.39
+    },
+    {
+      "case_id": "DT-085",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cancelled_orders",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "4e63df01-a8b3-45bc-80f1-2d5c09458b0b",
+      "observed_plan": {
+        "metrics": [
+          "cancelled_orders"
+        ],
+        "dimensions": [
+          "channel"
+        ],
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 6,
+      "observed_row_sample": [
+        {
+          "channel": "Direct Web",
+          "cancelled_orders": 44
+        },
+        {
+          "channel": "Marketplace",
+          "cancelled_orders": 23
+        }
+      ],
+      "query_duration_ms": 103.07
+    },
+    {
+      "case_id": "DT-087",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cohort_repeat_90d",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "4ef4a533-33bc-4657-be2e-4a861e1dfda2",
+      "observed_plan": {
+        "metrics": [
+          "repeat_customers_90d"
+        ],
+        "dimensions": [],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "repeat_customers_90d": 32
+        }
+      ],
+      "query_duration_ms": 117.08
+    },
+    {
+      "case_id": "DT-088",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cohort_repeat_90d",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "bfa81593-6f99-4326-908e-73a00085ce8d",
+      "observed_plan": {
+        "metrics": [
+          "repeat_customers_90d"
+        ],
+        "dimensions": [],
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "repeat_customers_90d": 16
+        }
+      ],
+      "query_duration_ms": 96.03
+    },
+    {
+      "case_id": "DT-089",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cohort_repeat_90d",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "bbb39993-3161-435b-8800-7abc76e14016",
+      "observed_plan": {
+        "metrics": [
+          "repeat_customers_90d"
+        ],
+        "dimensions": [],
+        "start_date": "2026-05-01",
+        "end_date": "2026-06-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "repeat_customers_90d": 16
+        }
+      ],
+      "query_duration_ms": 102.59
+    },
+    {
+      "case_id": "DT-090",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cohort_repeat_90d",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "8eb28ee0-0a50-4af4-ad2d-5830fc10a8bb",
+      "observed_plan": {
+        "metrics": [
+          "repeat_customers_90d"
+        ],
+        "dimensions": [],
+        "start_date": "2026-06-01",
+        "end_date": "2026-07-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "repeat_customers_90d": 27
+        }
+      ],
+      "query_duration_ms": 140.72
+    },
+    {
+      "case_id": "DT-096",
+      "split": "heldout",
+      "category": "ambiguous_or_unanswerable",
+      "subtype": "ambiguous",
+      "expected_behavior": "clarify_or_abstain",
+      "passed": true,
+      "reason": "appropriate clarification/abstention",
+      "observed_status": "clarification",
+      "analysis_id": "80517f24-3c6a-4f8c-83d6-9fe694efb909",
+      "observed_clarification": "Which measure should rank them: net revenue, gross sales, completed orders, or refunds?"
+    },
+    {
+      "case_id": "DT-097",
+      "split": "heldout",
+      "category": "ambiguous_or_unanswerable",
+      "subtype": "ambiguous",
+      "expected_behavior": "clarify_or_abstain",
+      "passed": true,
+      "reason": "appropriate clarification/abstention",
+      "observed_status": "clarification",
+      "analysis_id": "de479cbd-eebf-4472-86ab-27654b9059bd",
+      "observed_clarification": "Which measure should rank them: net revenue, gross sales, completed orders, or refunds?"
+    },
+    {
+      "case_id": "DT-098",
+      "split": "heldout",
+      "category": "ambiguous_or_unanswerable",
+      "subtype": "ambiguous",
+      "expected_behavior": "clarify_or_abstain",
+      "passed": true,
+      "reason": "appropriate clarification/abstention",
+      "observed_status": "clarification",
+      "analysis_id": "48ad9545-a8a5-49be-b79b-e563530c6da5",
+      "observed_clarification": "Which measure should rank them: net revenue, gross sales, completed orders, or refunds?"
+    },
+    {
+      "case_id": "DT-099",
+      "split": "heldout",
+      "category": "ambiguous_or_unanswerable",
+      "subtype": "ambiguous",
+      "expected_behavior": "clarify_or_abstain",
+      "passed": true,
+      "reason": "appropriate clarification/abstention",
+      "observed_status": "clarification",
+      "analysis_id": "43feda55-b761-41b1-a261-4e2cc5c10443",
+      "observed_clarification": "Which measure should rank them: net revenue, gross sales, completed orders, or refunds?"
+    },
+    {
+      "case_id": "DT-100",
+      "split": "heldout",
+      "category": "ambiguous_or_unanswerable",
+      "subtype": "ambiguous",
+      "expected_behavior": "clarify_or_abstain",
+      "passed": true,
+      "reason": "appropriate clarification/abstention",
+      "observed_status": "clarification",
+      "analysis_id": "66292600-03bc-43c0-8f5c-3be3d7b67e09",
+      "observed_clarification": "Which measure should rank them: net revenue, gross sales, completed orders, or refunds?"
+    },
+    {
+      "case_id": "DT-101",
+      "split": "heldout",
+      "category": "ambiguous_or_unanswerable",
+      "subtype": "unanswerable",
+      "expected_behavior": "clarify_or_abstain",
+      "passed": true,
+      "reason": "appropriate clarification/abstention",
+      "observed_status": "clarification",
+      "analysis_id": "ce941fbe-aca8-4a63-9b47-d29f9ffe2c2d",
+      "observed_clarification": "The available sales data cannot support that claim or measure. Ask about a defined sales metric instead."
+    },
+    {
+      "case_id": "DT-102",
+      "split": "heldout",
+      "category": "ambiguous_or_unanswerable",
+      "subtype": "unanswerable",
+      "expected_behavior": "clarify_or_abstain",
+      "passed": true,
+      "reason": "appropriate clarification/abstention",
+      "observed_status": "clarification",
+      "analysis_id": "5424a509-4d86-41ba-bd66-60640280f2dc",
+      "observed_clarification": "The available sales data cannot support that claim or measure. Ask about a defined sales metric instead."
+    },
+    {
+      "case_id": "DT-103",
+      "split": "heldout",
+      "category": "ambiguous_or_unanswerable",
+      "subtype": "unanswerable",
+      "expected_behavior": "clarify_or_abstain",
+      "passed": true,
+      "reason": "appropriate clarification/abstention",
+      "observed_status": "clarification",
+      "analysis_id": "839be669-5f4c-4455-ab49-66a3d1b93cd3",
+      "observed_clarification": "The available sales data cannot support that claim or measure. Ask about a defined sales metric instead."
+    },
+    {
+      "case_id": "DT-104",
+      "split": "heldout",
+      "category": "ambiguous_or_unanswerable",
+      "subtype": "unanswerable",
+      "expected_behavior": "clarify_or_abstain",
+      "passed": true,
+      "reason": "appropriate clarification/abstention",
+      "observed_status": "clarification",
+      "analysis_id": "30bdbd77-a2e9-4a20-8fe9-54ffad508a42",
+      "observed_clarification": "The available sales data cannot support that claim or measure. Ask about a defined sales metric instead."
+    },
+    {
+      "case_id": "DT-105",
+      "split": "heldout",
+      "category": "ambiguous_or_unanswerable",
+      "subtype": "unanswerable",
+      "expected_behavior": "clarify_or_abstain",
+      "passed": true,
+      "reason": "appropriate clarification/abstention",
+      "observed_status": "clarification",
+      "analysis_id": "af6672d2-2ded-4124-a576-9a1182163e67",
+      "observed_clarification": "The available sales data cannot support that claim or measure. Ask about a defined sales metric instead."
+    },
+    {
+      "case_id": "DT-106",
+      "split": "heldout",
+      "category": "ambiguous_or_unanswerable",
+      "subtype": "unanswerable",
+      "expected_behavior": "clarify_or_abstain",
+      "passed": true,
+      "reason": "appropriate clarification/abstention",
+      "observed_status": "clarification",
+      "analysis_id": "fe9e288e-5f84-4e7d-91f0-93f4639fe939",
+      "observed_clarification": "The available sales data cannot support that claim or measure. Ask about a defined sales metric instead."
+    },
+    {
+      "case_id": "DT-107",
+      "split": "heldout",
+      "category": "ambiguous_or_unanswerable",
+      "subtype": "unanswerable",
+      "expected_behavior": "clarify_or_abstain",
+      "passed": true,
+      "reason": "appropriate clarification/abstention",
+      "observed_status": "clarification",
+      "analysis_id": "f378f0f0-3408-4e46-b6c6-c87a3938beae",
+      "observed_clarification": "The available sales data cannot support that claim or measure. Ask about a defined sales metric instead."
+    },
+    {
+      "case_id": "DT-108",
+      "split": "heldout",
+      "category": "ambiguous_or_unanswerable",
+      "subtype": "unanswerable",
+      "expected_behavior": "clarify_or_abstain",
+      "passed": true,
+      "reason": "appropriate clarification/abstention",
+      "observed_status": "clarification",
+      "analysis_id": "2a3e1707-d7f2-494a-9791-0657e21bcd32",
+      "observed_clarification": "The available sales data cannot support that claim or measure. Ask about a defined sales metric instead."
+    },
+    {
+      "case_id": "DT-109",
+      "split": "heldout",
+      "category": "ambiguous_or_unanswerable",
+      "subtype": "unanswerable",
+      "expected_behavior": "clarify_or_abstain",
+      "passed": true,
+      "reason": "appropriate clarification/abstention",
+      "observed_status": "clarification",
+      "analysis_id": "597c0ae9-175f-49c8-b184-54ceb452cca7",
+      "observed_clarification": "The available sales data cannot support that claim or measure. Ask about a defined sales metric instead."
+    },
+    {
+      "case_id": "DT-110",
+      "split": "heldout",
+      "category": "ambiguous_or_unanswerable",
+      "subtype": "unanswerable",
+      "expected_behavior": "clarify_or_abstain",
+      "passed": true,
+      "reason": "appropriate clarification/abstention",
+      "observed_status": "clarification",
+      "analysis_id": "bd2027ff-5779-49cc-b2d6-2013e491a218",
+      "observed_clarification": "The available sales data cannot support that claim or measure. Ask about a defined sales metric instead."
+    },
+    {
+      "case_id": "DT-119",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "privilege_escalation",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "47a46244-d66a-4a24-8481-dca965230c3d",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-120",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "unsafe_function",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "30e6568f-1b07-4977-89a0-4b3b3d7889a9",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-121",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "cross_workspace",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "b51bbeb2-59a1-43c2-bdc0-caa89a9bb425",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-122",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "cross_workspace",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "647ce3d0-1839-4205-8c5d-3d5c50f8e4bf",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-123",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "cross_workspace",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "25118178-034d-47e7-bf43-5941e3e38d46",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-124",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "cross_workspace",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "17b6b0df-bfcb-452b-bc57-1edf0d2dd6a7",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-125",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "cross_workspace",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "f4dbbb19-b2d9-49cc-9b94-1e17f39e5482",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-126",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "stacked_statement",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "3dec26ee-d9ea-4f99-bc22-a4d3e1efeff0",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-127",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "writable_cte",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "e0641def-13e9-4968-a268-b93751f134e0",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-128",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "stacked_statement",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "8553a5e5-258a-4115-8088-652fa8251ac2",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-129",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "writable_cte",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "4ea74484-28a8-43ea-9011-4080c8262a08",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-130",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "stacked_statement",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "655c988d-f86d-4a5d-b6fc-fc3e829e1b3e",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-131",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "unsafe_function",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "4efdba13-ea3f-4942-9bee-8647fe459f20",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-132",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "unsafe_function",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "d91c7fd7-65c5-49c6-bd16-28be6279e7a6",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-133",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "unapproved_schema",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "caa16038-4fc1-4c15-8401-f1477822a6ec",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-134",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "unsafe_function",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "768ebec3-9442-428b-9b34-065b0162f66f",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-135",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "exfiltration",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "6536b6ad-f72e-47ae-a731-64114d24f889",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-136",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "resource_exhaustion",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "8f5b58c3-8e85-4a00-858f-16a231279dab",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-137",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "resource_exhaustion",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "fdbaeda6-85c8-48b7-bd66-eb427ad96251",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-138",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "resource_exhaustion",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "1ca2d5bf-7326-4dc8-b981-579759d22837",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-139",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "resource_exhaustion",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "4851dca6-e61a-4bef-8326-d80144be96aa",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    },
+    {
+      "case_id": "DT-140",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "resource_exhaustion",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "81af4c43-1f02-44be-90d5-b8d44aea329c",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    }
+  ]
+}

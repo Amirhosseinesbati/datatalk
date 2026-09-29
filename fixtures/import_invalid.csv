@@ -1,0 +1,7 @@
+order_id,customer_id,customer_name,customer_email,ordered_at,channel,product_id,product_name,category,quantity,unit_price_cents,discount_cents,status,currency
+BAD-001,CUST-600,Taylor Price,taylor.price@example.com,2026-09-14T11:00:00+00:00,Direct Web,PRD-600,Pen Pack Core,Office Supplies,0,499,0,completed,USD
+BAD-002,CUST-601,Reese Cole,reese.cole@example.com,not-a-date,Direct Web,PRD-601,Notebook Pro,Office Supplies,1,899,0,completed,USD
+BAD-003,CUST-602,Riley Stone,riley.stone@example.com,2026-09-14T11:00:00+00:00,Direct Web,PRD-602,Parcel Box Plus,Shipping,1,800,1200,completed,USD
+BAD-004,CUST-603,Cameron Kelly,cameron.kelly@example.com,2026-09-14T11:00:00+00:00,Direct Web,PRD-603,Desk Pad Core,Office Supplies,1,1400,0,pending,USD
+BAD-005,CUST-604,Sage Wright,sage.wright@example.com,2026-09-14T11:00:00+00:00,Direct Web,PRD-604,Whiteboard Plus,Office Supplies,1,2100,0,completed,EUR
+BAD-006,CUST-605,Jamie Foster,,2026-09-14T11:00:00+00:00,Direct Web,PRD-605,Label Roll Core,Office Supplies,1,650,0,completed,USD

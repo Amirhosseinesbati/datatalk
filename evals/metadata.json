@@ -1,0 +1,23 @@
+{
+  "dataset": "Synthetic Northstar Supply evaluation",
+  "source_manifest_sha256": "45baac2b00f4cecccc0cd4d7dd002e16d0b67f0a97ff84f08c6fc0cacef104a1",
+  "seed": 4104,
+  "reference_date": "2026-09-28",
+  "case_count": 140,
+  "category_counts": {
+    "access_sql_security": 30,
+    "ambiguous_or_unanswerable": 20,
+    "joins_cohort_refund_date": 30,
+    "standard_aggregation": 60
+  },
+  "split_counts": {
+    "development": 40,
+    "heldout": 100
+  },
+  "reference_rows_derived_by": "SQLite queries over generated structured CSV; no model-generated labels",
+  "ground_truth_location": "evals/private/reference.jsonl",
+  "runtime_retrieval_exclusion": [
+    "evals/private",
+    "evals/questions.jsonl"
+  ]
+}

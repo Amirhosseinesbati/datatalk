@@ -1,0 +1,26 @@
+{
+  "description": "Synthetic ledger fixture for deterministic business-metric contract tests",
+  "timezone": "UTC",
+  "currency": "USD",
+  "orders": [
+    {"id": "A", "ordered_at": "2026-01-31T12:00:00+00:00", "status": "completed", "discount_cents": 1000},
+    {"id": "B", "ordered_at": "2026-02-03T10:00:00+00:00", "status": "cancelled", "discount_cents": 0},
+    {"id": "C", "ordered_at": "2026-02-02T09:00:00+00:00", "status": "completed", "discount_cents": 500}
+  ],
+  "order_lines": [
+    {"id": "A1", "order_id": "A", "quantity": 2, "unit_price_cents": 10000, "discount_cents": 1000},
+    {"id": "A2", "order_id": "A", "quantity": 1, "unit_price_cents": 3000, "discount_cents": 0},
+    {"id": "B1", "order_id": "B", "quantity": 5, "unit_price_cents": 1000, "discount_cents": 0},
+    {"id": "C1", "order_id": "C", "quantity": 1, "unit_price_cents": 5000, "discount_cents": 500}
+  ],
+  "refunds": [
+    {"id": "R1", "order_line_id": "A1", "refunded_at": "2026-02-05T08:00:00+00:00", "amount_cents": 4000},
+    {"id": "R2", "order_line_id": "A1", "refunded_at": "2026-02-07T08:00:00+00:00", "amount_cents": 2000}
+  ],
+  "expected_months": {
+    "2026-01": {"gross_sales_cents": 23000, "discounts_cents": 1000, "refunds_cents": 0, "net_revenue_cents": 22000, "completed_orders": 1, "average_order_value_cents": 22000},
+    "2026-02": {"gross_sales_cents": 5000, "discounts_cents": 500, "refunds_cents": 6000, "net_revenue_cents": -1500, "completed_orders": 1, "average_order_value_cents": 4500},
+    "2026-03": {"gross_sales_cents": 0, "discounts_cents": 0, "refunds_cents": 0, "net_revenue_cents": 0, "completed_orders": 0, "average_order_value_cents": null}
+  },
+  "expected_total": {"gross_sales_cents": 28000, "discounts_cents": 1500, "refunds_cents": 6000, "net_revenue_cents": 20500, "completed_orders": 2}
+}

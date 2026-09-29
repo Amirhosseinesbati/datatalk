@@ -1,0 +1,681 @@
+{
+  "run_type": "reference-check",
+  "generated_at_utc": "2026-09-28T01:07:09+00:00",
+  "dataset_reference_date": "2026-09-28",
+  "dataset_manifest_sha256": "45baac2b00f4cecccc0cd4d7dd002e16d0b67f0a97ff84f08c6fc0cacef104a1",
+  "split": "heldout",
+  "summary": {
+    "mode": "reference-check",
+    "fixture_only": true,
+    "selected_cases": 63,
+    "case_counts": {
+      "passed": 63,
+      "total": 63
+    },
+    "answerable_result_correctness": {
+      "correct": 63,
+      "total": 63
+    },
+    "clarification_or_abstention": {
+      "appropriate": 0,
+      "total": 0
+    },
+    "security_rejection": {
+      "denied": 0,
+      "total": 0
+    },
+    "categories": {
+      "joins_cohort_refund_date": {
+        "passed": 21,
+        "total": 21
+      },
+      "standard_aggregation": {
+        "passed": 42,
+        "total": 42
+      }
+    },
+    "end_to_end_latency_ms": {
+      "p50": null,
+      "p95": null,
+      "n": 0
+    },
+    "query_latency_ms": {
+      "p50": null,
+      "p95": null,
+      "n": 0
+    },
+    "transport_errors": []
+  },
+  "case_results": [
+    {
+      "case_id": "DT-006",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-007",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-008",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-009",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-010",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-011",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-012",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-013",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-014",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-015",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-021",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-022",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-023",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-024",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-025",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-026",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-027",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-028",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-029",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-030",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "channel",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-035",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-036",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-037",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-038",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-039",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-040",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-041",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-042",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-043",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-044",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-045",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-050",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-051",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-052",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-053",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-054",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-055",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-056",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-057",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-058",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-059",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-060",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "monthly",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-063",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "refund_event_month",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-064",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "refund_event_month",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-065",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "refund_event_month",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-068",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "returning_customer",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-069",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "returning_customer",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-070",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "returning_customer",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-072",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "top_products",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-073",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "top_products",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-074",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "top_products",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-075",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "top_products",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-078",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "campaign_window_comparison",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-079",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "campaign_window_comparison",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-080",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "campaign_window_comparison",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-082",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cancelled_orders",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-083",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cancelled_orders",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-084",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cancelled_orders",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-085",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cancelled_orders",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-087",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cohort_repeat_90d",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-088",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cohort_repeat_90d",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-089",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cohort_repeat_90d",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-090",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cohort_repeat_90d",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    }
+  ]
+}

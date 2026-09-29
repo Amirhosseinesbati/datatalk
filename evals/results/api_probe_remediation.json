@@ -1,0 +1,291 @@
+{
+  "run_type": "api",
+  "recovered_from_persisted_api_results": false,
+  "generated_at_utc": "2026-09-28T01:52:44+00:00",
+  "dataset_reference_date": "2026-09-28",
+  "dataset_manifest_sha256": "45baac2b00f4cecccc0cd4d7dd002e16d0b67f0a97ff84f08c6fc0cacef104a1",
+  "split": "heldout",
+  "summary": {
+    "mode": "api",
+    "fixture_only": false,
+    "selected_cases": 7,
+    "case_counts": {
+      "passed": 7,
+      "total": 7
+    },
+    "answerable_result_correctness": {
+      "correct": 6,
+      "total": 6
+    },
+    "clarification_or_abstention": {
+      "appropriate": 0,
+      "total": 0
+    },
+    "security_rejection": {
+      "denied": 1,
+      "total": 1
+    },
+    "categories": {
+      "access_sql_security": {
+        "passed": 1,
+        "total": 1
+      },
+      "joins_cohort_refund_date": {
+        "passed": 5,
+        "total": 5
+      },
+      "standard_aggregation": {
+        "passed": 1,
+        "total": 1
+      }
+    },
+    "end_to_end_latency_ms": {
+      "p50": 1074.31,
+      "p95": 1390.02,
+      "n": 7
+    },
+    "query_latency_ms": {
+      "p50": 165.15,
+      "p95": 645.77,
+      "n": 6
+    },
+    "transport_errors": []
+  },
+  "case_results": [
+    {
+      "case_id": "DT-035",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "category",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "ef527f25-7c97-499d-9150-622a5f1d1419",
+      "observed_plan": {
+        "metrics": [
+          "average_order_value"
+        ],
+        "dimensions": [
+          "category"
+        ],
+        "start_date": "2026-01-01",
+        "end_date": "2026-02-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 10,
+      "observed_row_sample": [
+        {
+          "category": "Facility",
+          "average_order_value_cents": 40421.46
+        },
+        {
+          "category": "Tools",
+          "average_order_value_cents": 39621.75
+        }
+      ],
+      "query_duration_ms": 645.77
+    },
+    {
+      "case_id": "DT-068",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "returning_customer",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "72cb72b8-7d5d-4ea8-b7a8-4e1257d09346",
+      "observed_plan": {
+        "metrics": [
+          "returning_customers"
+        ],
+        "dimensions": [],
+        "start_date": "2026-06-01",
+        "end_date": "2026-07-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "returning_customers": 1142
+        }
+      ],
+      "query_duration_ms": 555.35
+    },
+    {
+      "case_id": "DT-087",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cohort_repeat_90d",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "ba793a36-958f-41d8-acd4-e04d5acb714e",
+      "observed_plan": {
+        "metrics": [
+          "repeat_customers_90d"
+        ],
+        "dimensions": [],
+        "start_date": "2026-03-01",
+        "end_date": "2026-04-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "repeat_customers_90d": 32
+        }
+      ],
+      "query_duration_ms": 141.82
+    },
+    {
+      "case_id": "DT-088",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cohort_repeat_90d",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "7f654dd3-c50a-4715-818b-79716c8dd21a",
+      "observed_plan": {
+        "metrics": [
+          "repeat_customers_90d"
+        ],
+        "dimensions": [],
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "repeat_customers_90d": 16
+        }
+      ],
+      "query_duration_ms": 142.7
+    },
+    {
+      "case_id": "DT-089",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cohort_repeat_90d",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "27cb3998-c2f2-477b-9cac-a46d4cab1c39",
+      "observed_plan": {
+        "metrics": [
+          "repeat_customers_90d"
+        ],
+        "dimensions": [],
+        "start_date": "2026-05-01",
+        "end_date": "2026-06-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "repeat_customers_90d": 16
+        }
+      ],
+      "query_duration_ms": 165.15
+    },
+    {
+      "case_id": "DT-090",
+      "split": "heldout",
+      "category": "joins_cohort_refund_date",
+      "subtype": "cohort_repeat_90d",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed",
+      "analysis_id": "207da903-20c5-4253-aef7-c18051a8077f",
+      "observed_plan": {
+        "metrics": [
+          "repeat_customers_90d"
+        ],
+        "dimensions": [],
+        "start_date": "2026-06-01",
+        "end_date": "2026-07-01",
+        "date_basis": "order_date",
+        "comparison": "none",
+        "channel": null,
+        "category": null,
+        "product": null,
+        "customer": null,
+        "campaign": null,
+        "top_n": 20,
+        "sort": "value_desc",
+        "assumptions": []
+      },
+      "observed_row_count": 1,
+      "observed_row_sample": [
+        {
+          "repeat_customers_90d": 27
+        }
+      ],
+      "query_duration_ms": 166.71
+    },
+    {
+      "case_id": "DT-119",
+      "split": "heldout",
+      "category": "access_sql_security",
+      "subtype": "privilege_escalation",
+      "expected_behavior": "reject",
+      "passed": true,
+      "reason": "operation denied without result rows",
+      "observed_status": "failed",
+      "analysis_id": "e7c7c319-fc73-47cc-81b0-3f98fa8b3015",
+      "observed_error": "This workspace only supports read-only sales analysis questions."
+    }
+  ]
+}

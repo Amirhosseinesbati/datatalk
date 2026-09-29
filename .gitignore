@@ -1,0 +1,23 @@
+.env
+.env.local
+.venv/
+.uv-cache/
+.local-pg/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+node_modules/
+dist/
+*.tsbuildinfo
+coverage/
+data/generated/
+*.log
+*.tmp
+.DS_Store
+
+# Local product brief; excluded from the public portfolio repository.
+/04-datatalk.md

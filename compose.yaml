@@ -1,0 +1,90 @@
+name: datatalk
+
+services:
+  db:
+    image: postgres:18.1-alpine3.23
+    environment:
+      POSTGRES_DB: datatalk
+      POSTGRES_USER: datatalk_admin
+      POSTGRES_PASSWORD: ${DATATALK_DB_PASSWORD:?Set DATATALK_DB_PASSWORD in .env}
+      DATATALK_APP_PASSWORD: ${DATATALK_APP_PASSWORD:?Set DATATALK_APP_PASSWORD in .env}
+      DATATALK_READER_PASSWORD: ${DATATALK_READER_PASSWORD:?Set DATATALK_READER_PASSWORD in .env}
+    volumes:
+      - postgres_data:/var/lib/postgresql
+      - ./db-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U datatalk_admin -d datatalk"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
+
+  bootstrap:
+    image: datatalk-api:local
+    pull_policy: never
+    environment:
+      DATABASE_URL: postgresql+psycopg://datatalk_admin:${DATATALK_DB_PASSWORD}@db:5432/datatalk
+      ANALYTICS_DATABASE_URL: postgresql+psycopg://datatalk_reader:${DATATALK_READER_PASSWORD}@db:5432/datatalk
+      DATATALK_MODE: demo
+      DATATALK_SECRET_KEY: ${DATATALK_SECRET_KEY:?Set DATATALK_SECRET_KEY in .env}
+      DATATALK_DEMO_PASSWORD: ${DATATALK_DEMO_PASSWORD:-DemoPass123!}
+      DATATALK_APP_ROLE: datatalk_app
+      DATATALK_READER_ROLE: datatalk_reader
+    command: ["/bin/sh", "/app/scripts/bootstrap.sh"]
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: "no"
+
+  api:
+    image: datatalk-api:local
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    environment:
+      DATABASE_URL: postgresql+psycopg://datatalk_app:${DATATALK_APP_PASSWORD}@db:5432/datatalk
+      ANALYTICS_DATABASE_URL: postgresql+psycopg://datatalk_reader:${DATATALK_READER_PASSWORD}@db:5432/datatalk
+      DATATALK_MODE: ${DATATALK_MODE:-demo}
+      DATATALK_SECRET_KEY: ${DATATALK_SECRET_KEY:?Set DATATALK_SECRET_KEY in .env}
+      DATATALK_DEMO_PASSWORD: ${DATATALK_DEMO_PASSWORD:-DemoPass123!}
+      DATATALK_MODEL_ID: ${DATATALK_MODEL_ID:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      DATATALK_COOKIE_SECURE: ${DATATALK_COOKIE_SECURE:-false}
+      DATATALK_APP_ROLE: datatalk_app
+      DATATALK_READER_ROLE: datatalk_reader
+    ports:
+      - "127.0.0.1:${DATATALK_API_PORT:-8000}:8000"
+    depends_on:
+      bootstrap:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+  api-worker:
+    image: datatalk-api:local
+    pull_policy: never
+    command: ["python", "-m", "datatalk.worker"]
+    environment:
+      DATABASE_URL: postgresql+psycopg://datatalk_app:${DATATALK_APP_PASSWORD}@db:5432/datatalk
+      ANALYTICS_DATABASE_URL: postgresql+psycopg://datatalk_reader:${DATATALK_READER_PASSWORD}@db:5432/datatalk
+      DATATALK_MODE: ${DATATALK_MODE:-demo}
+      DATATALK_SECRET_KEY: ${DATATALK_SECRET_KEY:?Set DATATALK_SECRET_KEY in .env}
+      DATATALK_MODEL_ID: ${DATATALK_MODEL_ID:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      DATATALK_APP_ROLE: datatalk_app
+      DATATALK_READER_ROLE: datatalk_reader
+    depends_on:
+      bootstrap:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+  web:
+    build:
+      context: ./apps/web
+    ports:
+      - "127.0.0.1:${DATATALK_WEB_PORT:-8080}:80"
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

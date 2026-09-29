@@ -1,0 +1,72 @@
+{
+  "run_type": "reference-check",
+  "generated_at_utc": "2026-09-27T20:54:37+00:00",
+  "dataset_reference_date": "2026-09-28",
+  "dataset_manifest_sha256": "45baac2b00f4cecccc0cd4d7dd002e16d0b67f0a97ff84f08c6fc0cacef104a1",
+  "split": "heldout",
+  "summary": {
+    "mode": "reference-check",
+    "fixture_only": true,
+    "selected_cases": 3,
+    "case_counts": {
+      "passed": 3,
+      "total": 3
+    },
+    "answerable_result_correctness": {
+      "correct": 3,
+      "total": 3
+    },
+    "clarification_or_abstention": {
+      "appropriate": 0,
+      "total": 0
+    },
+    "security_rejection": {
+      "denied": 0,
+      "total": 0
+    },
+    "categories": {
+      "standard_aggregation": {
+        "passed": 3,
+        "total": 3
+      }
+    },
+    "end_to_end_latency_ms": {
+      "p50": null,
+      "p95": null,
+      "n": 0
+    },
+    "transport_errors": []
+  },
+  "case_results": [
+    {
+      "case_id": "DT-006",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-007",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    },
+    {
+      "case_id": "DT-008",
+      "split": "heldout",
+      "category": "standard_aggregation",
+      "subtype": "scalar",
+      "expected_behavior": "answer",
+      "passed": true,
+      "reason": "semantic rows match",
+      "observed_status": "completed"
+    }
+  ]
+}

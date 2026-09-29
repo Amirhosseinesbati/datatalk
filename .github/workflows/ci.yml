@@ -1,0 +1,49 @@
+name: DataTalk checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  api-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install locked Python tooling
+        run: |
+          python -m pip install uv==0.11.28
+          uv sync --project apps/api --frozen --extra dev
+      - name: Lint and type check
+        run: |
+          uv run --project apps/api ruff check apps/api/src tests/api
+          uv run --project apps/api mypy apps/api/src/datatalk
+      - name: API and data tests
+        run: |
+          uv run --project apps/api pytest tests/api tests/data -q
+      - name: Reproduce full synthetic dataset
+        run: python scripts/seed_data.py --profile full --output data/generated/full
+
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install pnpm
+        run: npm install -g pnpm@11.19.0
+      - name: Install and verify client
+        run: |
+          pnpm --dir apps/web install --frozen-lockfile
+          pnpm --dir apps/web run typecheck
+          pnpm --dir apps/web run build
+
+  compose-config:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Compose configuration
+        run: docker compose --env-file .env.example config -q

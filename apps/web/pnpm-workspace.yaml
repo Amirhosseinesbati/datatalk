@@ -1,0 +1,7 @@
+packages:
+  - .
+
+# Only audited toolchain packages may run install-time native setup.
+allowBuilds:
+  '@tailwindcss/oxide': true
+  esbuild: true

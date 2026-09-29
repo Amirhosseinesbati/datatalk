@@ -1,0 +1,698 @@
+{
+  "packages": [
+    {
+      "name": "alembic",
+      "version": "1.20.0",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "argon2-cffi",
+      "version": "25.1.0",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "argon2-cffi-bindings",
+      "version": "26.1.0",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "license_expression": null,
+      "license": "MPL-2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.1",
+      "license_expression": "MIT-0",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.1",
+      "license_expression": null,
+      "license": "MIT",
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "license_expression": null,
+      "license": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "datatalk-api",
+      "version": "0.1.0",
+      "license_expression": null,
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": true
+    },
+    {
+      "name": "distro",
+      "version": "1.9.0",
+      "license_expression": null,
+      "license": "Apache License, Version 2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "fastapi",
+      "version": "0.141.1",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "license_expression": null,
+      "license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "httpcore2",
+      "version": "2.13.1",
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "httptools",
+      "version": "0.8.0",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "license_expression": null,
+      "license": "BSD-3-Clause",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "httpx2",
+      "version": "2.13.1",
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.0",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "jiter",
+      "version": "0.17.0",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "jsonpatch",
+      "version": "1.33",
+      "license_expression": null,
+      "license": "Modified BSD License",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "jsonpointer",
+      "version": "3.1.1",
+      "license_expression": null,
+      "license": "Modified BSD License",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "langchain",
+      "version": "1.4.2",
+      "license_expression": null,
+      "license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "langchain-core",
+      "version": "1.6.5",
+      "license_expression": null,
+      "license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "langchain-openai",
+      "version": "1.6.6",
+      "license_expression": null,
+      "license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "langchain-protocol",
+      "version": "0.0.19",
+      "license_expression": null,
+      "license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "langgraph",
+      "version": "1.2.12",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "langgraph-checkpoint",
+      "version": "4.2.0",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "langgraph-checkpoint-postgres",
+      "version": "3.1.2",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "langgraph-prebuilt",
+      "version": "1.1.0",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "langgraph-sdk",
+      "version": "0.4.5",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "langsmith",
+      "version": "0.14.1",
+      "license_expression": null,
+      "license": "MIT",
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "librt",
+      "version": "0.15.0",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "Mako",
+      "version": "1.4.3",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "3.0.3",
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "mypy",
+      "version": "1.20.2",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "mypy_extensions",
+      "version": "1.1.0",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "openai",
+      "version": "3.19.2",
+      "license_expression": "Apache-2.0",
+      "license": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "orjson",
+      "version": "3.12.0",
+      "license_expression": "MPL-2.0 AND (Apache-2.0 OR MIT)",
+      "license": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License",
+        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "ormsgpack",
+      "version": "1.12.2",
+      "license_expression": "Apache-2.0 OR MIT",
+      "license": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License",
+        "License :: OSI Approved :: MIT License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "license_expression": "Apache-2.0 OR BSD-2-Clause",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "pathspec",
+      "version": "1.1.1",
+      "license_expression": null,
+      "license": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "pluggy",
+      "version": "1.6.0",
+      "license_expression": null,
+      "license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "psycopg",
+      "version": "3.3.6",
+      "license_expression": "LGPL-3.0-only",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "psycopg-binary",
+      "version": "3.3.6",
+      "license_expression": "LGPL-3.0-only",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "psycopg-pool",
+      "version": "3.3.3",
+      "license_expression": "LGPL-3.0-only",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "pycparser",
+      "version": "3.0",
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.5",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "pydantic-settings",
+      "version": "2.15.0",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.46.5",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "Pygments",
+      "version": "2.21.0",
+      "license_expression": "BSD-2-Clause",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "pytest",
+      "version": "9.1.1",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.3",
+      "license_expression": null,
+      "license": "BSD-3-Clause",
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.32",
+      "license_expression": "Apache-2.0",
+      "license": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "license_expression": null,
+      "license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "regex",
+      "version": "2026.9.10",
+      "license_expression": "Apache-2.0 AND CNRI-Python",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "license_expression": null,
+      "license": "Apache-2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "requests-toolbelt",
+      "version": "1.0.0",
+      "license_expression": null,
+      "license": "Apache 2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "ruff",
+      "version": "0.16.9",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "sniffio",
+      "version": "1.3.1",
+      "license_expression": null,
+      "license": "MIT OR Apache-2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "SQLAlchemy",
+      "version": "2.1.1",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "sqlglot",
+      "version": "29.0.1",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "starlette",
+      "version": "1.7.0",
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "tenacity",
+      "version": "9.1.4",
+      "license_expression": null,
+      "license": "Apache 2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "tiktoken",
+      "version": "0.14.0",
+      "license_expression": null,
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": true
+    },
+    {
+      "name": "truststore",
+      "version": "0.10.4",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "license_expression": "PSF-2.0",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.4",
+      "license_expression": null,
+      "license": "Apache-2.0",
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0",
+      "license_expression": "MIT",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "uuid_utils",
+      "version": "0.17.1",
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.54.0",
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "watchfiles",
+      "version": "1.3.0",
+      "license_expression": null,
+      "license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "metadata_missing": false
+    },
+    {
+      "name": "websockets",
+      "version": "16.1.1",
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "xxhash",
+      "version": "4.0.1",
+      "license_expression": null,
+      "license": "BSD-2-Clause",
+      "license_classifiers": [],
+      "metadata_missing": false
+    },
+    {
+      "name": "zstandard",
+      "version": "0.25.0",
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "license_classifiers": [],
+      "metadata_missing": false
+    }
+  ],
+  "total": 79,
+  "missing_license_metadata": 2
+}

@@ -1,0 +1,5 @@
+order_id,customer_id,customer_name,customer_email,ordered_at,channel,product_id,product_name,category,quantity,unit_price_cents,discount_cents,status,currency
+DEMO-501,CUST-501,Morgan Reed,morgan.reed@example.com,2026-09-15T10:30:00+00:00,Direct Web,PRD-501,Desk Pad Plus,Office Supplies,2,1599,160,completed,USD
+DEMO-501,CUST-501,Morgan Reed,morgan.reed@example.com,2026-09-15T10:30:00+00:00,Direct Web,PRD-502,Shipping Label Core,Shipping,1,890,0,completed,USD
+DEMO-502,CUST-502,Casey Ellis,casey.ellis@example.com,2026-09-17T13:05:00+00:00,Marketplace,PRD-503,Surface Spray Core,Cleaning,3,1050,315,completed,USD
+DEMO-503,CUST-503,Alex Turner,alex.turner@example.com,2026-09-18T09:42:00+00:00,Wholesale,PRD-504,Cable Tray Plus,Facility,1,2690,0,cancelled,USD
