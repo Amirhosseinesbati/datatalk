@@ -26,7 +26,14 @@ FastAPI · React · LangGraph · PostgreSQL
 
 ### Evidence and scope
 
-The local PostgreSQL migration and synthetic data load ran, and the final 100-case demo API evaluation completed. See the evaluation report for measured scope. The included demo uses synthetic data and local simulators. Deployment and live-provider limits are documented in [implementation status](docs/IMPLEMENTATION_STATUS.md).
+| Evidence | Observed result | Scope |
+| --- | --- | --- |
+| Answerable questions | 63/63 correct | Held-out synthetic DEMO API, deterministic planner and executed SQL |
+| Clarification / denial | 15/15 appropriate; 22/22 security denials | Same 100-case run |
+| End-to-end latency | p50 1,101.71 ms; p95 2,173.73 ms (`n=100`) | Local per-request timings; requests were sent sequentially with a 500 ms pause between them |
+| Connected-model quality | Not measured | Requires configured provider and bounded evaluation |
+
+See the [evaluation protocol](docs/EVALUATION.md) and [per-case report](evals/results/heldout_api_release.md) for definitions, denominators and limitations. Deployment limits are in [implementation status](docs/IMPLEMENTATION_STATUS.md).
 
 ## Getting started
 
