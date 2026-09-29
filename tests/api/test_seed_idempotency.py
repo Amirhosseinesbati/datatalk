@@ -5,12 +5,20 @@ import json
 from datetime import datetime, timezone
 from types import SimpleNamespace
 
+from datatalk.database import Base, make_engine
+from datatalk.models import (
+    Channel,
+    Customer,
+    DataImport,
+    DatasetSnapshot,
+    Order,
+    User,
+    Workspace,
+)
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from datatalk import cli
-from datatalk.database import Base, make_engine
-from datatalk.models import Channel, Customer, DataImport, DatasetSnapshot, Order, User, Workspace
 
 
 def test_same_manifest_load_preserves_published_import_rows(tmp_path, monkeypatch):

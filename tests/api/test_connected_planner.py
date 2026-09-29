@@ -3,10 +3,9 @@
 from datetime import date
 from types import SimpleNamespace
 
+import datatalk.planner as planner_module
 import langchain_openai
 import pytest
-
-import datatalk.planner as planner_module
 from datatalk.planner import ConnectedPlanner
 from datatalk.schemas import PlanningDecision
 

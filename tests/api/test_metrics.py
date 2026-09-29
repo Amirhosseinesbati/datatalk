@@ -1,13 +1,22 @@
 import json
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
-from sqlalchemy.orm import Session
+
 from datatalk.compiler import compile_plan
 from datatalk.database import Base, make_engine
 from datatalk.executor import QueryExecutor
-from datatalk.models import Workspace, Customer, Product, Channel, Order, OrderLine, Refund
+from datatalk.models import (
+    Channel,
+    Customer,
+    Order,
+    OrderLine,
+    Product,
+    Refund,
+    Workspace,
+)
 from datatalk.schemas import QueryPlan
 from datatalk.views import create_views
+from sqlalchemy.orm import Session
 
 
 def metric_fixture_engine():
@@ -36,7 +45,7 @@ def metric_fixture_engine():
 
 
 def _value(engine, metric: str, month: str):
-    start = datetime.strptime(month, "%Y-%m").date()
+    start = date.fromisoformat(f"{month}-01")
     end = start.replace(year=start.year + 1, month=1) if start.month == 12 else start.replace(month=start.month + 1)
     plan = QueryPlan(metrics=[metric], start_date=start, end_date=end)
     compiled = compile_plan(plan, "w", dialect="sqlite")
@@ -49,12 +58,12 @@ def test_delayed_refund_cancelled_order_discount_and_zero_denominator():
     try:
         for month, expected in fixture["expected_months"].items():
             for key, value in expected.items():
-                metric = key[:-6] if key.endswith("_cents") else key
+                metric = key.removesuffix("_cents")
                 assert _value(engine, metric, month) == value, (month, key)
         assert _value(engine, "cancelled_orders", "2026-02") == 1
         assert _value(engine, "returning_customers", "2026-02") == 1
         assert _value(engine, "repeat_customers_90d", "2026-01") == 1
-        category_plan = QueryPlan(metrics=["net_revenue"], dimensions=["category"], start_date=datetime(2026, 2, 1).date(), end_date=datetime(2026, 3, 1).date())
+        category_plan = QueryPlan(metrics=["net_revenue"], dimensions=["category"], start_date=date(2026, 2, 1), end_date=date(2026, 3, 1))
         category_sql = compile_plan(category_plan, "w", dialect="sqlite")
         category_result = QueryExecutor(engine).execute(category_sql.sql, category_sql.params, "w", 20)
         assert len(category_result["rows"]) == 1

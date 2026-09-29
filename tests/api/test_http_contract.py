@@ -1,6 +1,5 @@
-from fastapi.testclient import TestClient
-
 from datatalk.main import app
+from fastapi.testclient import TestClient
 
 
 def test_openapi_describes_main_resource_responses():
