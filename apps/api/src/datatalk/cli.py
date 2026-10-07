@@ -116,7 +116,7 @@ def load_data(directory: Path, reset_demo: bool = False) -> None:
         for workspace_id in ids:
             previous = connection.execute(select(DatasetSnapshot.id).where(DatasetSnapshot.workspace_id == workspace_id, DatasetSnapshot.content_hash == content_hash)).scalar_one_or_none()
             if not previous:
-                connection.execute(insert(DatasetSnapshot), [{"id": str(uuid4()), "workspace_id": workspace_id, "reference_date": manifest["reference_date"], "content_hash": content_hash, "source": str(directory), "row_count": manifest.get("counts_by_workspace", {}).get(workspace_id, {}).get("orders", 0)}])
+                connection.execute(insert(DatasetSnapshot), [{"id": str(uuid4()), "workspace_id": workspace_id, "reference_date": manifest["reference_date"], "content_hash": content_hash, "source": f"synthetic-seed:{directory}", "row_count": manifest.get("counts_by_workspace", {}).get(workspace_id, {}).get("orders", 0)}])
     if get_settings().datatalk_mode == "demo":
         _seed_demo_users(workspaces)
 

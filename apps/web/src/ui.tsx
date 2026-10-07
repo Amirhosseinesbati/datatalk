@@ -80,11 +80,7 @@ export function formatCell(value: unknown, column?: string, metric?: string): st
   return String(value)
 }
 
-export function formatDate(value?: string): string {
-  if (!value) return 'Date unavailable'
-  const date = new Date(value)
-  return Number.isNaN(date.valueOf()) ? value : new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'short' }).format(date)
-}
+export { formatDate } from './time'
 
 export function toTitle(value: string): string {
   return value.replace(/_/g, ' ').replace(/\b\w/g, character => character.toUpperCase())

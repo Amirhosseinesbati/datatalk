@@ -1,0 +1,24 @@
+/* Semantic presentation contract. Media/PDF colors and exports are untouched. */
+:root, :root[data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #0b111c; --panel: #111b2a; --panel-raised: #162337; --panel-soft: #0f1928; --rail: #0c1422;
+  --text: #e4edf8; --muted: #a0b1c8; --subtle: #899db9; --border: #293b53; --border-strong: #435c7a;
+  --accent: #43ddbe; --accent-soft: #153e3b; --on-accent: #05251f; --focus: #85c3ff;
+  --info: #9dc3ff; --info-bg: #182e4a; --success: #81e1ba; --success-bg: #17392e;
+  --warning: #ffd28b; --warning-bg: #40311c; --danger: #ffabb5; --danger-bg: #3e2431;
+  --code-bg: #091423; --code-text: #c3d9f0; --shadow: 0 12px 35px #00000029;
+  --chart-grid: #2b3c53; --chart-axis: #a0b1c8; --chart-1: #63a5ff; --chart-2: #48dbb3;
+  --chart-3: #be9bff; --chart-4: #ffc273; --chart-5: #ff8ba8; --chart-6: #72d0e8;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --canvas: #eef3f9; --panel: #ffffff; --panel-raised: #f4f7fc; --panel-soft: #f7f9fc; --rail: #e6edf6;
+  --text: #192d46; --muted: #536780; --subtle: #5c7089; --border: #ccd8e6; --border-strong: #9cb0c9;
+  --accent: #006c60; --accent-soft: #e0f2ed; --on-accent: #ffffff; --focus: #176cca;
+  --info: #24599c; --info-bg: #eaf2ff; --success: #176a48; --success-bg: #e9f7ee;
+  --warning: #865307; --warning-bg: #fff3dd; --danger: #a82d46; --danger-bg: #fff0f3;
+  --code-bg: #eef3fa; --code-text: #203c5d; --shadow: 0 12px 35px #1633530d;
+  --chart-grid: #d4dfed; --chart-axis: #536780; --chart-1: #286cc9; --chart-2: #00866b;
+  --chart-3: #8056ba; --chart-4: #ac6b0b; --chart-5: #ba3b65; --chart-6: #097c9e;
+}
+html, body { background: var(--canvas); color: var(--text); }

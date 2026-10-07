@@ -28,6 +28,7 @@ export interface Catalog {
   freshness?: { snapshot_id: string; reference_date: string; created_at: string; hash: string } | null
   source_tables?: string[]
   synthetic?: boolean
+  dataset_kind?: 'synthetic' | 'imported' | 'mixed' | 'unknown'
   date_conventions?: { timezone?: string; interval?: string; sales_basis?: string; refund_basis?: string; currency?: string }
 }
 

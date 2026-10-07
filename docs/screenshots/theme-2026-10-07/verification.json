@@ -1,0 +1,16 @@
+{
+  "fixtureOnly": true,
+  "productionBundle": true,
+  "strictCsp": true,
+  "observations": [
+    "Desktop initial state: source, reference date, starter prompts, no overflow",
+    "Guided question, executed UI lifecycle, exact money table, query and original snapshot",
+    "Save modal focus and retained draft, success feedback, reports/reopening, catalog filtering/empty state, local CSV precheck and history Escape",
+    "Clarification follow-up, policy denial, request failure/draft recovery/retry, empty result",
+    "390px mobile: new notebook, builder, repeat run and table with no page overflow",
+    "Mobile navigation focus/Tab/Escape, sign out, login failure and successful retry",
+    "Both themes at 1440, 1024, 768 and 390; no overflow at 320; accessible chart tooltip, unchanged draft/modal/navigation/request flow; zero theme-triggered API calls; persisted and System pre-paint themes; blocked storage; strict CSP"
+  ],
+  "browserErrors": [],
+  "policyErrors": []
+}

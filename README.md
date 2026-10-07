@@ -2,7 +2,7 @@
 
 > A governed analytics notebook with inspectable SQL and reports.
 
-![DataTalk product interface](apps/web/screenshots/notebook-1440.jpg)
+![DataTalk analysis workbench with synthetic UI fixture data](docs/screenshots/theme-2026-10-07/result-desktop-dark.png)
 
 [Getting started](#getting-started) · [Architecture](docs/ARCHITECTURE.md) · [Evaluation](docs/EVALUATION.md) · [Security](docs/SECURITY.md)
 
@@ -83,3 +83,9 @@ python scripts/seed_data.py --profile full
 
 See [IMPLEMENTATION_STATUS.md](docs/IMPLEMENTATION_STATUS.md) for actual verification results and [HANDOVER.md](docs/HANDOVER.md) for the complete launch and pending matrix.
 
+
+## Analysis workbench and appearance
+
+The guided notebook, dataset context and chart/table evidence now support Light/Dark/System while retaining drafts and selected work. Read [WORKBENCH_THEMES.md](docs/WORKBENCH_THEMES.md) for setup, tested scope, and [client customization](docs/WORKSPACE_UPGRADE.md#reusing-the-product-for-another-client).
+
+The [light workbench](docs/screenshots/theme-2026-10-07/result-desktop-light.png), [mobile builder](docs/screenshots/theme-2026-10-07/builder-mobile-dark.png), and [enabled Run action](docs/screenshots/publication-check-2026-10-07/run-enabled-desktop-light.png) use illustrative synthetic UI fixtures. The fixture API does not execute SQL or models.

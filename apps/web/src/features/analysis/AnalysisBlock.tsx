@@ -5,6 +5,7 @@ import type { Analysis, Catalog } from '../../api/client'
 import { api, formatError } from '../../api/client'
 import { formatDate, Modal, Notice, primaryMetric, toTitle } from '../../ui'
 import { ResultVisual } from './ResultVisual'
+import { resultProvenance } from '../../workspace'
 
 function humanValue(value: unknown): string {
   if (value === null || value === undefined || value === '') return '—'
@@ -20,6 +21,7 @@ function detail(error: Analysis['error']): string {
 
 function Evidence({ analysis, catalog }: { analysis: Analysis; catalog?: Catalog }) {
   const [copied, setCopied] = useState(false)
+  const provenance = resultProvenance(analysis)
   const [copyError, setCopyError] = useState('')
   const planEntries = analysis.plan ? Object.entries(analysis.plan).filter(([, value]) => value !== undefined && value !== null && value !== '') : []
   const evidence = analysis.evidence && typeof analysis.evidence === 'object' && !Array.isArray(analysis.evidence) ? analysis.evidence as Record<string, unknown> : null
@@ -38,8 +40,9 @@ function Evidence({ analysis, catalog }: { analysis: Analysis; catalog?: Catalog
         {!planEntries.length && <div><dt>Plan</dt><dd>Plan details were not returned.</dd></div>}
       </dl></section>
       <section><h4><Database size={15} /> Provenance</h4><dl>
-        <div><dt>Dataset reference date</dt><dd>{catalog?.freshness?.reference_date || analysis.snapshot?.reference_date || 'Not supplied'}</dd></div>
-        <div><dt>Snapshot created</dt><dd>{catalog?.freshness?.created_at ? formatDate(catalog.freshness.created_at) : analysis.snapshot?.created_at ? formatDate(analysis.snapshot.created_at) : 'Not supplied'}</dd></div>
+        <div><dt>Dataset reference date</dt><dd>{provenance.referenceDate || 'Not retained for this result'}</dd></div>
+        <div><dt>Snapshot created</dt><dd>{provenance.createdAt ? formatDate(provenance.createdAt) : 'Not retained for this result'}</dd></div>
+        {catalog?.freshness?.reference_date && <div><dt>Current catalog reference</dt><dd>{catalog.freshness.reference_date} (may differ from this result)</dd></div>}
         <div><dt>Rows</dt><dd>{analysis.result?.row_count ?? '—'}{analysis.result?.truncated ? ' · capped' : ''}</dd></div>
         <div><dt>Snapshot</dt><dd className="hash-value">{analysis.snapshot?.hash || analysis.snapshot_hash || 'See saved report'}</dd></div>
         <div><dt>Sources used</dt><dd>{sources.length ? sources.join(', ') : 'See query below'}</dd></div>
@@ -93,7 +96,8 @@ export function AnalysisBlock({ analysis, catalog, onClarify, onRetry, onSaved, 
     {current.status === 'completed' && <>
       <div className="answer"><div className="answer-label">Answer</div><p>{current.narrative || 'The validated query completed. Inspect the result and evidence below.'}</p></div>
       {current.result && <ResultVisual result={current.result} chart={current.chart} sql={current.sql} metric={primaryMetric(current.plan)} />}
-      <div className="block-actions"><button className="primary-button save-button" data-modal-return onClick={event => { event.currentTarget.focus(); setSaveOpen(true) }} disabled={!canSave} title={!canSave ? 'Your role cannot save reports' : undefined}><BookmarkPlus size={16} /> Save report</button><span className="result-meta"><ShieldCheck size={15} /> Validated query {current.result?.truncated ? '· result capped' : '· result complete'}</span></div>
+      <div className="block-actions"><button className="primary-button save-button" data-modal-return onClick={event => { event.currentTarget.focus(); setSaveOpen(true) }} disabled={!canSave} title={!canSave ? 'Your role cannot save reports' : undefined}><BookmarkPlus size={16} /> Save report</button><span className="result-meta"><ShieldCheck size={15} /> Validated query {current.result ? current.result.truncated ? '· result capped' : '· result complete' : '· result unavailable'}</span></div>
+      {save.isSuccess && <Notice tone="success">Report saved. Open Reports to revisit or export it.</Notice>}
       <details className="evidence-details"><summary><span><FileCode2 size={17} /> Assumptions, evidence & SQL</span><ChevronDown size={17} className="details-chevron" /></summary><Evidence analysis={current} catalog={catalog} /></details>
     </>}
     {saveOpen && <Modal title="Save reproducible report" onClose={() => setSaveOpen(false)}><form onSubmit={event => { event.preventDefault(); if (title.trim()) save.mutate() }}>

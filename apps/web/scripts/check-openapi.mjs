@@ -22,7 +22,7 @@ const contracts = [
   ['get', '/api/session', [], ['user', 'mode']],
   ['post', '/api/auth/login', ['email', 'password'], ['user', 'mode']],
   ['post', '/api/auth/logout'],
-  ['get', '/api/catalog', [], ['metrics', 'dimensions', 'freshness', 'source_tables']],
+  ['get', '/api/catalog', [], ['metrics', 'dimensions', 'freshness', 'source_tables', 'synthetic', 'dataset_kind']],
   ['get', '/api/conversations', [], ['items']],
   ['post', '/api/conversations', [], ['id', 'title']],
   ['get', '/api/conversations/{conversation_id}', [], ['id', 'analyses']],

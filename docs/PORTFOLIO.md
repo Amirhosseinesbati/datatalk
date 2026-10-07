@@ -1,4 +1,8 @@
-# DataTalk — independent portfolio project
+# DataTalk - independent portfolio project
+
+**October 7 workbench and themes.** The interface now puts the question editor, query results and searchable metric context in a compact analytics workbench. Persisted Dark/Light/System preferences apply before paint, work with blocked storage and preserve drafts, open forms and navigation. Semantic palettes cover native controls, chart axes/series/tooltips, tables, query code and status states. The production-bundle browser regression exercises both themes and responsive widths under restrictive CSP; it uses explicitly illustrative synthetic fixtures. See [WORKBENCH_THEMES.md](WORKBENCH_THEMES.md) for current screenshots and the distinction between UI evidence and live database/model acceptance.
+
+**October workspace upgrade.** The product now offers a catalog-backed guided question builder, source/reference context, configurable workspace branding and accessible mobile navigation. Result provenance and UTC timestamps remain tied to the analyzed snapshot; request retries and null chart values have explicit behavior. An isolated automated UI fixture regression covers desktop/mobile analysis, evidence, report save/reopen, clarification, denial, request recovery and authentication UI transitions. This verifies interface behavior with illustrative data; connected-model quality and database/container acceptance remain separate. See [WORKSPACE_UPGRADE.md](WORKSPACE_UPGRADE.md) for reproducible preview/check commands and current evidence.
 
 ## Case study
 

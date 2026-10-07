@@ -1,0 +1,251 @@
+{
+  "fixtureOnly": true,
+  "publicationChecks": {
+    "initialRunButton": [
+      {
+        "theme": "dark",
+        "disabled": true,
+        "editorValue": "",
+        "placeholder": "Which channel's net revenue changed most last month?",
+        "color": "rgb(5, 37, 31)",
+        "background": "rgb(67, 221, 190)",
+        "opacity": "0.52",
+        "brightness": 1,
+        "contrast": 9.5476839443641
+      },
+      {
+        "theme": "light",
+        "disabled": true,
+        "editorValue": "",
+        "placeholder": "Which channel's net revenue changed most last month?",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(0, 108, 96)",
+        "opacity": "0.52",
+        "brightness": 1,
+        "contrast": 6.336886105894223
+      }
+    ],
+    "enabledRunButton": [
+      {
+        "state": "normal",
+        "theme": "dark",
+        "disabled": false,
+        "editorValue": "Show net revenue by channel last month.",
+        "placeholder": "Which channel's net revenue changed most last month?",
+        "color": "rgb(5, 37, 31)",
+        "background": "rgb(67, 221, 190)",
+        "opacity": "1",
+        "brightness": 1,
+        "contrast": 9.5476839443641
+      },
+      {
+        "state": "hover",
+        "theme": "dark",
+        "disabled": false,
+        "editorValue": "Show net revenue by channel last month.",
+        "placeholder": "Which channel's net revenue changed most last month?",
+        "color": "rgb(5, 37, 31)",
+        "background": "rgb(67, 221, 190)",
+        "opacity": "1",
+        "brightness": 1.07,
+        "contrast": 10.693273264346523
+      },
+      {
+        "state": "focus",
+        "theme": "dark",
+        "disabled": false,
+        "editorValue": "Show net revenue by channel last month.",
+        "placeholder": "Which channel's net revenue changed most last month?",
+        "color": "rgb(5, 37, 31)",
+        "background": "rgb(67, 221, 190)",
+        "opacity": "1",
+        "brightness": 1,
+        "contrast": 9.5476839443641
+      },
+      {
+        "state": "normal",
+        "theme": "light",
+        "disabled": false,
+        "editorValue": "Show net revenue by channel last month.",
+        "placeholder": "Which channel's net revenue changed most last month?",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(0, 108, 96)",
+        "opacity": "1",
+        "brightness": 1,
+        "contrast": 6.336886105894223
+      },
+      {
+        "state": "hover",
+        "theme": "light",
+        "disabled": false,
+        "editorValue": "Show net revenue by channel last month.",
+        "placeholder": "Which channel's net revenue changed most last month?",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(0, 108, 96)",
+        "opacity": "1",
+        "brightness": 1.07,
+        "contrast": 5.717946090134263
+      },
+      {
+        "state": "focus",
+        "theme": "light",
+        "disabled": false,
+        "editorValue": "Show net revenue by channel last month.",
+        "placeholder": "Which channel's net revenue changed most last month?",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(0, 108, 96)",
+        "opacity": "1",
+        "brightness": 1,
+        "contrast": 6.336886105894223
+      }
+    ],
+    "mobileHeader": [
+      {
+        "theme": "dark",
+        "width": 390,
+        "height": 844,
+        "header": {
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "bottom": 54
+        },
+        "themeControl": {
+          "left": 195.84375,
+          "right": 294.84375,
+          "top": 7.5,
+          "bottom": 45.5
+        },
+        "appearanceDisabled": false,
+        "menu": {
+          "left": 16,
+          "right": 46,
+          "top": 11.5,
+          "bottom": 41.5
+        },
+        "navigation": {
+          "left": 0,
+          "right": 390,
+          "top": 783,
+          "bottom": 844
+        },
+        "lastAction": {
+          "left": 14,
+          "right": 376,
+          "top": 5160.265625,
+          "bottom": 5192.765625
+        }
+      },
+      {
+        "theme": "light",
+        "width": 390,
+        "height": 844,
+        "header": {
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "bottom": 54
+        },
+        "themeControl": {
+          "left": 195.84375,
+          "right": 294.84375,
+          "top": 7.5,
+          "bottom": 45.5
+        },
+        "appearanceDisabled": false,
+        "menu": {
+          "left": 16,
+          "right": 46,
+          "top": 11.5,
+          "bottom": 41.5
+        },
+        "navigation": {
+          "left": 0,
+          "right": 390,
+          "top": 783,
+          "bottom": 844
+        },
+        "lastAction": {
+          "left": 14,
+          "right": 376,
+          "top": 5160.265625,
+          "bottom": 5192.765625
+        }
+      }
+    ],
+    "mobileLastContent": [
+      {
+        "theme": "dark",
+        "width": 390,
+        "height": 844,
+        "header": {
+          "left": 0,
+          "right": 390,
+          "top": -4430,
+          "bottom": -4376
+        },
+        "themeControl": {
+          "left": 195.84375,
+          "right": 294.84375,
+          "top": -4422.5,
+          "bottom": -4384.5
+        },
+        "appearanceDisabled": false,
+        "menu": {
+          "left": 16,
+          "right": 46,
+          "top": -4418.5,
+          "bottom": -4388.5
+        },
+        "navigation": {
+          "left": 0,
+          "right": 390,
+          "top": 783,
+          "bottom": 844
+        },
+        "lastAction": {
+          "left": 14,
+          "right": 376,
+          "top": 730.265625,
+          "bottom": 762.765625
+        }
+      },
+      {
+        "theme": "light",
+        "width": 390,
+        "height": 844,
+        "header": {
+          "left": 0,
+          "right": 390,
+          "top": -4430,
+          "bottom": -4376
+        },
+        "themeControl": {
+          "left": 195.84375,
+          "right": 294.84375,
+          "top": -4422.5,
+          "bottom": -4384.5
+        },
+        "appearanceDisabled": false,
+        "menu": {
+          "left": 16,
+          "right": 46,
+          "top": -4418.5,
+          "bottom": -4388.5
+        },
+        "navigation": {
+          "left": 0,
+          "right": 390,
+          "top": 783,
+          "bottom": 844
+        },
+        "lastAction": {
+          "left": 14,
+          "right": 376,
+          "top": 730.265625,
+          "bottom": 762.765625
+        }
+      }
+    ]
+  }
+}

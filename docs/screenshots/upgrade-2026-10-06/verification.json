@@ -1,0 +1,12 @@
+{
+  "fixtureOnly": true,
+  "observations": [
+    "Desktop initial state: source, reference date, starter prompts, no overflow",
+    "Guided question, executed UI lifecycle, exact money table, query and original snapshot",
+    "Save modal focus, success feedback, reports and conversation reopening",
+    "Clarification follow-up, policy denial, request failure/draft recovery/retry, empty result",
+    "390px mobile: new notebook, builder, repeat run and table with no page overflow",
+    "Mobile navigation focus/Tab/Escape, sign out, login failure and successful retry"
+  ],
+  "browserErrors": []
+}

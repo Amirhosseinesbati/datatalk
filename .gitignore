@@ -21,3 +21,12 @@ data/generated/
 
 # Local product brief; excluded from the public portfolio repository.
 /04-datatalk.md
+
+# Private local configuration and publication receipts
+.env.*
+!.env.example
+!**/.env.example
+*.db
+*.db-wal
+*.db-shm
+**/library-files.json

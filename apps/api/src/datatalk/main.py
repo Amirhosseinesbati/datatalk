@@ -16,6 +16,7 @@ from .auth import create_login_session, current_user, public_user, require_role,
 from .catalog import public_catalog
 from .config import get_settings
 from .database import SessionLocal, engine, get_session
+from .dataset_identity import dataset_kind
 from .imports import preview_import, publish_import, template_csv
 from .logging_utils import configure_datatalk_logging
 from .models import AnalysisConversation, AnalysisJob, DataImport, DatasetSnapshot, QueryExecution, ReportVersion, SavedReport, User
@@ -42,7 +43,7 @@ async def reject_cross_origin_writes(request: Request, call_next):
             allowed = {str(request.base_url).rstrip("/")}
             allowed.update(value.strip().rstrip("/") for value in settings.datatalk_allowed_origins.split(",") if value.strip())
             if settings.datatalk_mode == "demo":
-                allowed.update({"http://localhost:5173", "http://127.0.0.1:5173"})
+                allowed.update({"http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:4314", "http://127.0.0.1:4314"})
             if origin.rstrip("/") not in allowed:
                 return JSONResponse({"detail": "Request origin is not allowed"}, status_code=403)
     return await call_next(request)
@@ -135,7 +136,9 @@ def logout(request: Request, response: Response, db: Session = Depends(get_sessi
 @app.get("/api/catalog", response_model=CatalogOut)
 def catalog(db: Session = Depends(get_session), user: User = Depends(current_user)) -> dict:
     snapshot = latest_snapshot(db, user.workspace_id)
-    return {**public_catalog(), "freshness": {"snapshot_id": snapshot.id, "reference_date": snapshot.reference_date, "created_at": snapshot.created_at.isoformat(), "hash": snapshot.content_hash} if snapshot else None, "synthetic": get_settings().datatalk_mode == "demo"}
+    sources = list(db.scalars(select(DatasetSnapshot.source).where(DatasetSnapshot.workspace_id == user.workspace_id).distinct()))
+    kind = dataset_kind(user.workspace_id, sources)
+    return {**public_catalog(), "freshness": {"snapshot_id": snapshot.id, "reference_date": snapshot.reference_date, "created_at": snapshot.created_at.isoformat(), "hash": snapshot.content_hash} if snapshot else None, "synthetic": kind == "synthetic", "dataset_kind": kind}
 
 
 @app.post("/api/conversations", status_code=201, response_model=ConversationSummaryOut)

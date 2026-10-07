@@ -10,7 +10,8 @@
     "typecheck": "node scripts/check-openapi.mjs && tsc --noEmit",
     "preview": "vite preview --host 0.0.0.0",
     "licenses": "node scripts/license-report.mjs",
-    "api:check": "node scripts/check-openapi.mjs"
+    "api:check": "node scripts/check-openapi.mjs",
+    "test": "node --experimental-strip-types --test tests/*.test.ts"
   },
   "dependencies": {
     "@tanstack/react-query": "5.90.2",

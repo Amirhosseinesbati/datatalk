@@ -2,6 +2,8 @@
 
 The FastAPI OpenAPI document is `/api/openapi.json`; the interactive local reference is `/api/docs`. All application routes have the `/api` prefix. The web client uses a same-origin proxy and sends the session cookie with requests. JSON is UTF-8. Authentication is required except for `/api/health` and `/api/auth/login`.
 
+The catalog includes `dataset_kind` (`synthetic`, `imported`, `mixed`, or `unknown`), derived from workspace-scoped retained source records. It is independent of DEMO/CONNECTED model mode. The compatibility `synthetic` flag is true only for a seed-only dataset. CSV imports are additive, so a seeded workspace with published imports is mixed; an unmapped source remains unknown. New seed snapshots carry a `synthetic-seed:` marker. The workspace UI retains each result's own snapshot metadata and displays UTC times. See [WORKSPACE_UPGRADE.md](WORKSPACE_UPGRADE.md) for the current 4314/8314 preview and verification record.
+
 | Method and path | Purpose | Role |
 | --- | --- | --- |
 | `GET /api/health` | Database reachability and mode | Public |

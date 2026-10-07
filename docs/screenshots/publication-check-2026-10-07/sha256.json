@@ -1,0 +1,34 @@
+[
+  {
+    "file": "run-enabled-desktop-dark.png",
+    "sha256": "41BDE82FDD2983827B67A7DA56A7E508C23D337365CD5943023CE9AFB096FBDA"
+  },
+  {
+    "file": "run-enabled-desktop-light.png",
+    "sha256": "625D0D5B9DA1A55E267DF6E27279C359F8B8E8BA443AE1F027CE511A9071D405"
+  },
+  {
+    "file": "mobile-header-dark.png",
+    "sha256": "F66A96BC85F169F023B0D51E6FFA63D1E8563DC793536A0A7590C29535D693BF"
+  },
+  {
+    "file": "mobile-header-light.png",
+    "sha256": "957D84F26D716EA0F99F69417E42B399CA296AC13CAF921FD960D04E6428549E"
+  },
+  {
+    "file": "mobile-last-content-dark.png",
+    "sha256": "3C2CBAD7AB7C6DF2AC052DAD525AFAD355CEEEECB19BD775B5C9656422B4211A"
+  },
+  {
+    "file": "mobile-last-content-light.png",
+    "sha256": "57898BB975669359609ADD48816C6F23F7766631DE4E36C270189E001E325420"
+  },
+  {
+    "file": "publication-check.json",
+    "sha256": "7A42B81C35A6315D89FC12AB0963FB20CB74D127080E51EFF5CF67F87D5BF29F"
+  },
+  {
+    "file": "verification.json",
+    "sha256": "00EF3DDCB61EBF6203555FFA30C02058390BBB9739561D244F49EA6C180DD621"
+  }
+]

@@ -1,5 +1,9 @@
 # DataTalk implementation status
 
+For the 2026-10-07 workbench/theme pass, see [WORKBENCH_THEMES.md](WORKBENCH_THEMES.md): strict types and build, 12 frontend tests, 51 API tests passed (4 PostgreSQL skips), Ruff, and production-bundle headless UI evidence in both themes. This local pass makes no new performance or live-model accuracy claim.
+
+For the implemented 2026-10-06 workspace upgrade, current preview ports, test evidence and remaining acceptance work, see [WORKSPACE_UPGRADE.md](WORKSPACE_UPGRADE.md). The entries below retain the original September implementation record.
+
 Updated: 2026-09-28. The target is the complete v1 contract in `04-datatalk.md`.
 
 ## Build plan

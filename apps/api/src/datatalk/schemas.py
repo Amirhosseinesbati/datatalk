@@ -99,6 +99,7 @@ class CatalogOut(BaseModel):
     source_tables: list[str]
     freshness: FreshnessOut | None
     synthetic: bool
+    dataset_kind: Literal["synthetic", "imported", "mixed", "unknown"] = "unknown"
 
 
 class QueryResultOut(BaseModel):

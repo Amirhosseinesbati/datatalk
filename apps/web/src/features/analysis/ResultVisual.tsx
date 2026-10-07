@@ -1,8 +1,11 @@
 import { useMemo, useState } from 'react'
 import type { AnalysisResult, ChartSpec, ResultCell } from '../../api/client'
 import { formatCell, isMoneyColumn, resultColumnTitle } from '../../ui'
+import { EmptyState } from '../../ui'
+import { Search } from 'lucide-react'
+import { chartNumber } from './chartData'
 
-const COLORS = ['#266f86', '#e5a84d', '#705b9d', '#589c79', '#d96d54', '#8e7a5b']
+const COLORS = Array.from({ length: 6 }, (_, index) => `var(--chart-${index + 1})`)
 const compact = new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 })
 
 type Point = { label: string; value: number; series?: string }
@@ -21,8 +24,8 @@ function getPoints(result: AnalysisResult, chart?: ChartSpec): Point[] {
   if (!x || !y) return []
   return result.rows.slice(0, 18).flatMap(row => {
     const raw = row[y]
-    const value = typeof raw === 'number' ? raw : Number(raw)
-    if (!Number.isFinite(value)) return []
+    const value = chartNumber(raw)
+    if (value === undefined) return []
     return [{ label: formatCell(row[x]), value, series: chart?.series ? formatCell(row[chart.series]) : undefined }]
   })
 }
@@ -31,7 +34,7 @@ export function ResultVisual({ result, chart, sql, metric }: { result: AnalysisR
   const [view, setView] = useState<'chart' | 'table' | 'query'>('chart')
   const points = useMemo(() => getPoints(result, chart), [result, chart])
   const { columns, x, y } = selectFields(result, chart)
-  const hasChart = !!points.length && chart?.type !== 'table'
+  const hasChart = !!points.length && (!chart?.type || ['bar', 'line'].includes(chart.type)) && !chart?.series
   const shownView = view === 'query' && sql ? 'query' : hasChart ? view : 'table'
   return <section className="result-surface" aria-label="Analysis result">
     <div className="result-toolbar">
@@ -42,13 +45,15 @@ export function ResultVisual({ result, chart, sql, metric }: { result: AnalysisR
         {sql && <button className={shownView === 'query' ? 'selected' : ''} aria-pressed={shownView === 'query'} onClick={() => setView('query')}>Query</button>}
       </div>}
     </div>
-    {shownView === 'query' ? <pre className="result-query"><code>{sql}</code></pre> : shownView === 'chart' && x && y ? <div className="chart-panel"><Chart points={points} type={chart?.type === 'line' ? 'line' : 'bar'} x={x} y={y} metric={metric} /></div> : <ResultTable result={result} columns={columns} metric={metric} />}
+    {shownView === 'query' ? <pre className="result-query"><code>{sql}</code></pre> : !result.rows.length ? <EmptyState icon={<Search size={22} />} title="No data in this scope">The query completed with no matching rows. Try a different period or broader grouping. Inspect Query to check the scope.</EmptyState> : shownView === 'chart' && x && y ? <div className="chart-panel"><Chart points={points} totalRows={result.rows.length} type={chart?.type === 'line' ? 'line' : 'bar'} x={x} y={y} metric={metric} /></div> : <ResultTable result={result} columns={columns} metric={metric} />}
+    {!!chart?.series && <p className="result-warning">Multiple series are shown in the table to preserve each exact value.</p>}
     {hasChart && shownView === 'chart' && <details className="accessible-table"><summary>Show data table for this chart</summary><ResultTable result={result} columns={columns} metric={metric} /></details>}
     {result.truncated && <p className="result-warning">The server capped this result. Refine your question for a complete view.</p>}
   </section>
 }
 
-function Chart({ points, type, x, y, metric }: { points: Point[]; type: 'bar' | 'line'; x: string; y: string; metric?: string }) {
+function Chart({ points, totalRows, type, x, y, metric }: { points: Point[]; totalRows: number; type: 'bar' | 'line'; x: string; y: string; metric?: string }) {
+  const [activePoint, setActivePoint] = useState<number | null>(null)
   const width = 800
   const height = 316
   const left = 67
@@ -71,9 +76,9 @@ function Chart({ points, type, x, y, metric }: { points: Point[]; type: 'bar' | 
   const yLabel = `${resultColumnTitle(y)}${isMoneyColumn(y, metric) ? ' (USD)' : ''}`
 
   return <div className="chart-scroll">
-    <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${type === 'line' ? 'Line' : 'Bar'} chart of ${yLabel} by ${resultColumnTitle(x)}. Values are listed in the data table below.`}>
+    <svg viewBox={`0 0 ${width} ${height}`} role="group" aria-label={`${type === 'line' ? 'Line' : 'Bar'} chart of ${yLabel} by ${resultColumnTitle(x)}. Focus a point for its value, or use the data table below.`}>
       {tickValues.map((tick, index) => <g key={index}>
-        <line x1={left} x2={width - right} y1={yAt(tick)} y2={yAt(tick)} stroke="#e6e9e7" strokeDasharray={tick === 0 ? undefined : '4 5'} />
+        <line x1={left} x2={width - right} y1={yAt(tick)} y2={yAt(tick)} stroke="var(--chart-grid)" strokeDasharray={tick === 0 ? undefined : '4 5'} />
         <text x={left - 12} y={yAt(tick) + 4} textAnchor="end" className="chart-axis">{axisValue(tick)}</text>
       </g>)}
       {type === 'line' && <path d={linePath} fill="none" stroke={COLORS[0]} strokeWidth="3" strokeLinejoin="round" strokeLinecap="round" />}
@@ -81,14 +86,15 @@ function Chart({ points, type, x, y, metric }: { points: Point[]; type: 'bar' | 
         const center = left + step * (index + .5)
         const upper = Math.min(yAt(point.value), zeroY)
         const barHeight = Math.max(Math.abs(zeroY - yAt(point.value)), 2)
-        return <g key={`${point.label}-${index}`}>
-          {type === 'bar' ? <rect x={center - Math.min(step * .29, 24)} y={upper} width={Math.min(step * .58, 48)} height={barHeight} rx="4" fill={COLORS[index % COLORS.length]} /> : <circle cx={center} cy={yAt(point.value)} r="5" fill={COLORS[0]} stroke="white" strokeWidth="2" />}
+        return <g key={`${point.label}-${index}`} className="chart-point" tabIndex={0} role="img" aria-label={`${point.label}: ${formatCell(point.value, y, metric)}`} onFocus={() => setActivePoint(index)} onBlur={() => setActivePoint(null)} onMouseEnter={() => setActivePoint(index)} onMouseLeave={() => setActivePoint(null)} onKeyDown={event => { if (event.key === 'Escape') setActivePoint(null) }}>
+          {type === 'bar' ? <rect x={center - Math.min(step * .29, 24)} y={upper} width={Math.min(step * .58, 48)} height={barHeight} rx="4" fill={COLORS[index % COLORS.length]} /> : <circle cx={center} cy={yAt(point.value)} r="5" fill={COLORS[0]} stroke="var(--panel-soft)" strokeWidth="2" />}
           <title>{point.label}: {formatCell(point.value, y, metric)}{point.series ? ` · ${point.series}` : ''}</title>
           <text x={center} y={height - 34} textAnchor="end" transform={`rotate(-28 ${center} ${height - 34})`} className="chart-axis chart-x-label">{formatLabel(point.label)}</text>
         </g>
       })}
     </svg>
-    <p className="chart-caption">{yLabel} by {resultColumnTitle(x)} · Showing {points.length} of {points.length < 18 ? points.length : 'up to 18'} plotted rows. Use the table for exact values.</p>
+    {activePoint !== null && points[activePoint] && <div className="chart-tooltip" role="status"><span>{points[activePoint].label}</span><strong>{formatCell(points[activePoint].value, y, metric)}</strong></div>}
+    <p className="chart-caption">{yLabel} by {resultColumnTitle(x)} · Plotting {points.length} of {totalRows} returned rows (up to 18). Missing values are omitted. Use the table for exact values.</p>
   </div>
 }
 

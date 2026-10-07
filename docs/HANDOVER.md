@@ -1,5 +1,13 @@
 # Handover
 
+## Latest local workbench/theme pass - 2026-10-07
+
+The compact question/results/data-context workbench now supports persisted Dark, Light and live System appearance, with an external pre-paint bootstrap and semantic chart colors. Current evidence, customization, checks and limitations are in [WORKBENCH_THEMES.md](WORKBENCH_THEMES.md). Development ports remain **4314** (web) and **8314** (API); the headless runner now tests the built production bundle under CSP. No live model or container result is claimed for this pass.
+
+## Previous local workspace pass - 2026-10-06
+
+The guided analytics workspace, configurable branding, dataset identity, historical provenance, UTC times, responsive navigation and fixture browser regressions are documented in [WORKSPACE_UPGRADE.md](WORKSPACE_UPGRADE.md). Current development ports are **4314** (web) and **8314** (API). That document includes the Docker-free illustrative preview and separates UI fixture checks from actual database/model verification. The older verification matrix below records the September baseline.
+
 Updated: 2026-09-28. DataTalk is an independent portfolio pilot for a fictional company. All bundled sales data are synthetic.
 
 ## Exact demo launch
